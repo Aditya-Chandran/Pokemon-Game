@@ -1,15 +1,15 @@
 class pokemonAttributes {
-    public int damageGiven, damageTaken, level=1, health, pokemonType;
+    public int damageGiven, damageTaken, level=0, maxHealth, pokemonType;
     private void increaseHealth(){
-        health+=level*0.25*health;
+        maxHealth += level*0.25*maxHealth ;
     }
 }
 
 class mechanics extends pokemonAttributes{
-    float ct, cg;
+    float constantTaken, constantGiven;
     {
-        damageTaken *= ct;
-        damageGiven *= cg;
+        damageTaken *= constantTaken;
+        damageGiven *= constantGiven;
     }
 }
 
@@ -17,18 +17,18 @@ class fireType extends mechanics {
     {
         if (pokemonType == 1)
         {
-            cg = 1;
-            ct = 1;
+            constantGiven = 1;
+            constantTaken = 1;
         }
         else if (pokemonType == 2)
         {
-            cg = 0.75f;
-            ct = 1.25f;
+            constantGiven = 0.75f;
+            constantTaken = 1.25f;
         }
         else if (pokemonType == 3)
         {
-            cg = 1.25f;
-            ct = 0.75f;
+            constantGiven = 1.25f;
+            constantTaken = 0.75f;
         }
     }
 }
@@ -37,18 +37,18 @@ class waterType extends mechanics {
     {
         if (pokemonType == 1)
         {
-            cg = 1.25f;
-            ct = 0.75f;
+            constantGiven = 1.25f;
+            constantTaken = 0.75f;
         }
         else if (pokemonType == 2)
         {
-            cg = 1;
-            ct = 1;
+            constantGiven = 1;
+            constantTaken = 1;
         }
         else if (pokemonType == 3)
         {
-            ct = 1.25f;
-            cg = 0.75f;
+            constantTaken = 1.25f;
+            constantGiven = 0.75f;
         }
     }
 
@@ -58,20 +58,19 @@ class grassType extends mechanics {
     {
         if (pokemonType == 1)
         {
-            cg = 0.75f;
-            ct = 1.25f;
+            constantGiven = 0.75f;
+            constantTaken = 1.25f;
         }
         else if (pokemonType == 2)
         {
-            ct = 0.75f;
-            cg = 1.25f;
+            constantTaken = 0.75f;
+            constantGiven = 1.25f;
         }
         else if (pokemonType == 3)
         {
-            cg = 1;
-            ct = 1;
+            constantGiven = 1;
+            constantTaken = 1;
         }
     }
-
 }
 
