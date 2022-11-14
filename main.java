@@ -1,7 +1,7 @@
 class pokemonAttributes {
     public int damageGiven, damageTaken, level=0, maxHealth, pokemonType;
     private void increaseHealth(){
-        maxHealth += level*0.25*maxHealth ;
+        maxHealth += level*0.25*maxHealth;
     }
 }
 
