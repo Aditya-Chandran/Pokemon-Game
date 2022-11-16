@@ -104,6 +104,18 @@ public class PokemonMoves {
             moveList.add(Volt_Tackle);
 
             // ************************             GROUND TYPE            *************************
+            PokemonMoves bonemerang=new PokemonMoves("Bonemerang",2,50,90,32);
+            moveList.add(bonemerang);
+
+            PokemonMoves earthquake=new PokemonMoves("Earthquake",2,100,100,32);
+            moveList.add(earthquake);
+            
+            PokemonMoves dig=new PokemonMoves("Dig",2,100,100,32);
+            moveList.add(dig);
+            
+            PokemonMoves fissure=new PokemonMoves("Fissure",2,999999,30,32);
+            moveList.add(fissure);
+
             // ************************             PSYCHIC TYPE            *************************
             // ************************             FIGHTING TYPE            *************************
             // ************************             POISON TYPE            *************************
