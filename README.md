@@ -5,7 +5,10 @@
 ## TEAM MEMBERS
 
 |NAME | GITHUB ID|
+|-----|--------|
 |Aditya Chandran | github.com/Aditya-Chandran|
+|-----|--------|
 |Suyesh Jadhav | github.com/SuyeshJadhav|
+|-----|--------|
 |Vedant Chavan | github.com/VedantChavan03|
 
