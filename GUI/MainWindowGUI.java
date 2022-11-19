@@ -13,8 +13,8 @@ public class MainWindowGUI /*implements ActionListener*/ {
     static JButton newButton;
     static JButton exitButton;
     public static void main(String[] args) {
-        ImageIcon imageTitle = new ImageIcon("PokemonLogo.png");         //create image icon title
-        ImageIcon imageLogo = new ImageIcon("PokemonMainLogo.png");
+        ImageIcon imageTitle = new ImageIcon("./images/PokemonLogo.png");         //create image icon title
+        ImageIcon imageLogo = new ImageIcon("./images/PokemonMainLogo.png");
         JFrame frame = new JFrame("Pokemon Game");        //creates frame
         loadButton = new JButton();
         newButton = new JButton();
