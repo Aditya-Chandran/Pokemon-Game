@@ -25,6 +25,10 @@ public class MainWindowGUI implements ActionListener  {
     static Border border = BorderFactory.createRaisedBevelBorder();
 
     public static void main(String[] args) {
+        createFrame();
+    }
+
+    public static void createFrame(){
         frame = new JFrame("Pokemon Game"); // creates frame
         loadButton = new JButton();
         newButton = new JButton();
@@ -111,7 +115,6 @@ public class MainWindowGUI implements ActionListener  {
         label.setVerticalAlignment(JLabel.TOP);
         label.setHorizontalAlignment(JLabel.CENTER);
         panel4.add(label); // add label to panel
-
     }
     
     @Override

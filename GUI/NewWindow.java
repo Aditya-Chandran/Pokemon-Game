@@ -14,7 +14,7 @@ public class NewWindow implements ActionListener{
     static Border border = BorderFactory.createRaisedBevelBorder();
     static JButton Button1;
     static JFrame newFrame = new JFrame();
-    static NewWindow obj1;
+    static NewWindow obj1 = new NewWindow();
     public static void main(String[] args) {
         
     }
@@ -50,10 +50,10 @@ public class NewWindow implements ActionListener{
         Button1.setBackground(Color.GRAY);
         Button1.setBorder(border);
         Button1.setFocusable(false);
-        Button1.addActionListener(obj1);
         Button1.setLayout(null);
         // Button1.add(newLabel); // add label to panel
         Button1.setIcon(MainWindowGUI.homeIcon); // adds image on newlabel
+        Button1.addActionListener(obj1);
         
         Panel2.setBackground(new Color(0, 0, 100));
         Panel2.setBounds(222, 5, 1000, 300);
