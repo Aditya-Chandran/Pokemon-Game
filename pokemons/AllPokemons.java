@@ -5,8 +5,10 @@ public class AllPokemons {
     public int pokemonType, pokemonSpeed;
     public String pokemonName;
 
+    //to store data of all pokemons as a list of objects
     public static ArrayList<AllPokemons> pokemonList=new ArrayList<>();
     
+    //initializes object of pokemon data
     AllPokemons(String pokemonName, int pokemonType, int pokemonSpeed){
         this.pokemonName=pokemonName;
         this.pokemonType=pokemonType;

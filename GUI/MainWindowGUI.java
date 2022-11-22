@@ -27,7 +27,7 @@ public class MainWindowGUI /*implements ActionListener*/ {
         JLabel label = new JLabel();        //create label and title
         Border border = BorderFactory.createRaisedBevelBorder();
 
-        /////////////////////////////////////////////       FRAME      //////////////////////////////////////////////////////////
+        // -------------- FRAME -----------------
 
         frame.setBounds(0,0,1440,850);         //sets size dimensions
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);       //exit the program on close
@@ -37,7 +37,7 @@ public class MainWindowGUI /*implements ActionListener*/ {
         frame.setVisible(true);         //make frame visible
         frame.setLayout(null);
 
-        ////////////////////////////////////////////        PANEL      ///////////////////////////////////////////////////////////
+        // --------------- PANEL ------------------
         
         panel.setBackground(new Color(0,0,100));
         panel.setPreferredSize(new Dimension(1440,850));
@@ -62,7 +62,7 @@ public class MainWindowGUI /*implements ActionListener*/ {
         panel3.setBounds(222,595,1000,100);
         panel.add(panel3);
 
-        //////////////////////////////////////////////      BUTTON        /////////////////////////////////////////////////////////
+        // -------------------- BUTTONS ----------------------
         
         loadButton.setPreferredSize(new DimensionUIResource(990,90));
         loadButton.setBackground(new Color(99,99,99));
@@ -95,7 +95,7 @@ public class MainWindowGUI /*implements ActionListener*/ {
         panel2.add(newButton);
         panel3.add(exitButton);
 
-        ////////////////////////////////////////////////        LABEL     ///////////////////////////////////////////////////////
+        // ------------------- LABEL ------------------------
         
         label.setIcon(imageLogo);       //adds image on label
         label.setVerticalAlignment(JLabel.TOP);

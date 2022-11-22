@@ -4,8 +4,11 @@ import java.util.*;
 public class PokemonMoves {
         public String moveName;
         public int moveDamage,minLevel,moveType,accuracy;
+
+        //to store moves as a list of objects
         public static ArrayList<PokemonMoves> moveList=new ArrayList<>();
         
+        //initializes the object of move data
         PokemonMoves(String moveName, int moveType, int moveDamage,int accuracy,int minLevel){
             this.moveName=moveName;
             this.moveType=moveType;
