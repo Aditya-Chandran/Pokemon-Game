@@ -7,8 +7,5 @@ public class UserPokemons{
     public static ArrayList<UserPokemons> userPokemonList = new ArrayList<UserPokemons>();
 
     UserPokemons(){
-    public static void addUserPokemons(UserPokemons pokemon){
-        userPokemonList.add(pokemon);
-        }
     }  
 }
