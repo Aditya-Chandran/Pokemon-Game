@@ -1,14 +1,11 @@
 package GUI;
+
 import javax.swing.*;
-import javax.swing.border.*;
 import javax.swing.border.Border;
-import javax.swing.plaf.DimensionUIResource;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.*;
 import GUI.*;
-// import javafx.scene.paint.Color;
-import javafx.scene.text.Text;
 
 public class NewWindow implements ActionListener{
 
@@ -54,7 +51,7 @@ public class NewWindow implements ActionListener{
 
         //                  MENU BUTTON
         
-        Button1.setPreferredSize(new DimensionUIResource(40, 40));
+        Button1.setPreferredSize(new Dimension(40, 40));
         Button1.setBackground(Color.GRAY);
         Button1.setBorder(border);
         Button1.setFocusable(false);
@@ -89,7 +86,7 @@ public class NewWindow implements ActionListener{
         nameLabel.setForeground(Color.RED);
         Panel3.add(nameLabel);
    
-        enterButton.setPreferredSize(new DimensionUIResource(80, 40));
+        enterButton.setPreferredSize(new Dimension(80, 40));
         enterButton.setBackground(Color.GRAY);
         enterButton.setBorder(border);
         enterButton.setFocusable(false);
@@ -110,6 +107,8 @@ public class NewWindow implements ActionListener{
 
         if (e.getSource()==enterButton){
             System.out.println(NameText.getText());
+            newFrame.setVisible(false);
+            BattleWindow.battle();
         }
     }
 }
