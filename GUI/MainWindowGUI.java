@@ -19,10 +19,17 @@ public class MainWindowGUI implements ActionListener  {
     static JFrame newFrame;
     static JPanel newPanel;
     static JButton Button1;
+<<<<<<< HEAD
     static ImageIcon imageTitle = new ImageIcon(".\\images\\PokemonLogo.png"); // create image icon title
     static ImageIcon homeIcon = new ImageIcon(".\\images\\homeIcon.png");
     static ImageIcon imageLogo = new ImageIcon(".\\images\\PokemonMainLogo.png");
     static ImageIcon backgroundImage = new ImageIcon(".\\images\\Background.png");
+=======
+    static ImageIcon imageTitle = new ImageIcon("./images/PokemonLogo.png"); // create image icon title
+    static ImageIcon homeIcon = new ImageIcon("./images/homeIcon.png");
+    static ImageIcon imageLogo = new ImageIcon("./images/PokemonMainLogo.png");
+    static ImageIcon backgroundImage = new ImageIcon("./images/Background.png");
+>>>>>>> 73d7d9821bc372f553b1ddc9aaffe2a434c97a52
     static Border border = BorderFactory.createRaisedBevelBorder();
 
     public static void main(String[] args) {

@@ -1,8 +1,6 @@
 package GUI;
 import GUI.*;
-// import javafx.scene.text.Font;
 import javax.swing.*;
-import javax.swing.JComponent.*;
 import javax.swing.border.Border;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -22,7 +20,6 @@ public class BattleWindow implements ActionListener{
     }
 
     public static void battle(){
-        // JLabel newLabel = new JLabel();
         JLabel pokeLabel1 = new JLabel();
         JLabel pokeLabel2 = new JLabel();
         JPanel Panel1 = new JPanel();
