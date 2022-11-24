@@ -16,7 +16,7 @@ public class NewWindow implements ActionListener{
     static JFrame newFrame = new JFrame();
     static NewWindow obj1 = new NewWindow();
     public static void main(String[] args) {
-        
+        createNewFrame();
     }
     public static void menuPanel(){
         
