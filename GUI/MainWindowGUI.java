@@ -11,6 +11,7 @@ import java.awt.event.ActionListener;
 import GUI.*;
 
 public class MainWindowGUI implements ActionListener  {
+    
     static MainWindowGUI obj = new MainWindowGUI();
     static JButton loadButton;
     static JFrame frame;
@@ -19,9 +20,9 @@ public class MainWindowGUI implements ActionListener  {
     static JFrame newFrame;
     static JPanel newPanel;
     static JButton Button1;
-    static ImageIcon imageTitle = new ImageIcon("PokemonLogo.png"); // create image icon title
-    static ImageIcon homeIcon = new ImageIcon("homeIcon.png");
-    static ImageIcon imageLogo = new ImageIcon("PokemonMainLogo.png");
+    static ImageIcon imageTitle = new ImageIcon("./images/PokemonLogo.png"); // create image icon title
+    static ImageIcon homeIcon = new ImageIcon("./images/homeIcon.png");
+    static ImageIcon imageLogo = new ImageIcon("./images/PokemonMainLogo.png");
     static Border border = BorderFactory.createRaisedBevelBorder();
 
     public static void main(String[] args) {
