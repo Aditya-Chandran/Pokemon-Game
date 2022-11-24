@@ -182,8 +182,8 @@ public class Pokemon {
         /*38*/Pokemon sudowoodo=new Pokemon("Sudowoodo",11,30);
         pokList.add(sudowoodo);
 
-        /*39*/Pokemon boldore=new Pokemon("Boldore",11,20);
-        pokList.add(boldore);
+        /*39*/Pokemon roggenrola=new Pokemon("Roggenrola",11,20);
+        pokList.add(roggenrola);
      
         /*40*/Pokemon rockruff=new Pokemon("Rockruff",11,60);
         pokList.add(rockruff);
