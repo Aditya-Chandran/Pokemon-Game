@@ -38,6 +38,12 @@ public class AllPokemons {
 
         AllPokemons torchic=new AllPokemons("Torchic",1,45);
         pokemonList.add(torchic);
+        
+        AllPokemons fletchling =new AllPokemons("Fletchling",1,62);
+        pokemonList.add(fletchling);
+        
+        AllPokemons litten=new AllPokemons("Litten",1,70);
+        pokemonList.add(litten);
 
         
         // ************************             WATER TYPE            *************************
@@ -112,6 +118,9 @@ public class AllPokemons {
         
         AllPokemons ralts=new AllPokemons("Ralts",7,40);
         pokemonList.add(ralts);
+        
+        AllPokemons gothita =new AllPokemons("Gothita",7,40);
+        pokemonList.add(gothita);
 
         
         // ************************             FIGHTING TYPE            *************************
@@ -177,6 +186,9 @@ public class AllPokemons {
         
         AllPokemons axew=new AllPokemons("Axew",13,57);
         pokemonList.add(axew);
+        
+        AllPokemons gible=new AllPokemons("Gible",13,57);
+        pokemonList.add(gible);
 
 
         // ************************             GHOST TYPE            *************************
