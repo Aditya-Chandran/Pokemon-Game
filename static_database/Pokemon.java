@@ -4,7 +4,7 @@ import java.util.*;
 import java.awt.image.BufferedImage;
 
 public class Pokemon {
-    public int pokType, pokSpeed,pokCost, pokLevel;
+    public int pokType, pokSpeed, pokCost, pokLevel;
     public BufferedImage pokSprite;
     public String pokName;
     public Moves pokMoves[] = new Moves[4]; 
