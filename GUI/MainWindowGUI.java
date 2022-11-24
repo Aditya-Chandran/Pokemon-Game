@@ -4,13 +4,13 @@ import mainData.*;
 import mechanics.*;
 import javax.swing.*;
 import javax.swing.border.Border;
-import javax.swing.plaf.DimensionUIResource;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import GUI.*;
 
 public class MainWindowGUI implements ActionListener  {
+    
     static MainWindowGUI obj = new MainWindowGUI();
     static JButton loadButton;
     static JFrame frame;
@@ -19,9 +19,10 @@ public class MainWindowGUI implements ActionListener  {
     static JFrame newFrame;
     static JPanel newPanel;
     static JButton Button1;
-    static ImageIcon imageTitle = new ImageIcon("PokemonLogo.png"); // create image icon title
-    static ImageIcon homeIcon = new ImageIcon("homeIcon.png");
-    static ImageIcon imageLogo = new ImageIcon("PokemonMainLogo.png");
+    static ImageIcon imageTitle = new ImageIcon("C:\\Users\\SuyeshJadhav\\Desktop\\Pokemon-Game\\images\\PokemonLogo.png"); // create image icon title
+    static ImageIcon homeIcon = new ImageIcon("C:\\Users\\SuyeshJadhav\\Desktop\\Pokemon-Game\\images\\homeIcon.png");
+    static ImageIcon imageLogo = new ImageIcon("C:\\Users\\SuyeshJadhav\\Desktop\\Pokemon-Game\\images\\PokemonMainLogo.png");
+    static ImageIcon backgroundImage = new ImageIcon("C:\\Users\\SuyeshJadhav\\Desktop\\Pokemon-Game\\images\\Background.png");
     static Border border = BorderFactory.createRaisedBevelBorder();
 
     public static void main(String[] args) {
@@ -34,6 +35,7 @@ public class MainWindowGUI implements ActionListener  {
         newButton = new JButton();
         exitButton = new JButton();
         JPanel panel = new JPanel();
+        // JPanel bgPanel = new JPanel();
         JPanel panel1 = new JPanel();
         JPanel panel2 = new JPanel();
         JPanel panel3 = new JPanel();
@@ -49,7 +51,6 @@ public class MainWindowGUI implements ActionListener  {
         frame.getContentPane().setBackground(new Color(0, 0, 100)); // change color background
         frame.setVisible(true); // make frame visible
         frame.setLayout(null);
-        // frame.setExtendedState(JFrame.MAXIMIZED_BOTH);
 
         ////////////////////////////////////////////        PANEL      ///////////////////////////////////////////////////////////
 
@@ -78,7 +79,7 @@ public class MainWindowGUI implements ActionListener  {
 
         //////////////////////////////////////////////      BUTTON       /////////////////////////////////////////////////////////
 
-        loadButton.setPreferredSize(new DimensionUIResource(990, 90));
+        loadButton.setPreferredSize(new Dimension(990, 90));
         loadButton.setBackground(new Color(99, 99, 99));
         loadButton.setForeground(new Color(0, 0, 0));
         loadButton.setFont(new Font("consolas", Font.BOLD, 30));
@@ -87,7 +88,7 @@ public class MainWindowGUI implements ActionListener  {
         loadButton.setFocusable(false);
         loadButton.addActionListener(e -> System.out.println("1"));
 
-        newButton.setPreferredSize(new DimensionUIResource(990, 90));
+        newButton.setPreferredSize(new Dimension(990, 90));
         newButton.setBackground(new Color(99, 99, 99));
         newButton.setFont(new Font("consolas", Font.BOLD, 30));
         newButton.setForeground(new Color(0, 0, 0));
@@ -96,7 +97,7 @@ public class MainWindowGUI implements ActionListener  {
         newButton.setFocusable(false);
         newButton.addActionListener(obj);
 
-        exitButton.setPreferredSize(new DimensionUIResource(990, 90));
+        exitButton.setPreferredSize(new Dimension(990, 90));
         exitButton.setBackground(new Color(99, 99, 99));
         exitButton.setFont(new Font("consolas", Font.BOLD, 30));
         exitButton.setForeground(new Color(0, 0, 0));
