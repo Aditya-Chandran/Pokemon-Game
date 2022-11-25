@@ -68,8 +68,8 @@ public class Moves {
             /*14*/Moves Hydro_Cannon=new Moves("Hydro Cannon",2,150,90);
             moveList.add(Hydro_Cannon);
 
-            /*15*/Moves Water_Sprout=new Moves("Water Sprout",2,150,100);
-            moveList.add(Water_Sprout);
+            /*15*/Moves Water_Spout=new Moves("Water Spout",2,150,100);
+            moveList.add(Water_Spout);
 
         
 
