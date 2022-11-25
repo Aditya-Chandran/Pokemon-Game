@@ -2,15 +2,22 @@ package GUI;
 
 import mainData.*;
 import mechanics.*;
+import static_database.*;
 import javax.swing.*;
 import javax.swing.border.Border;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import GUI.*;
+// import static_database.*;
 
 public class MainWindowGUI implements ActionListener  {
     
+    static Pokemon charmander;
+    static {
+        Moves.addMoves();
+        charmander=new Pokemon("Charmander",1,65,7 ,300 ,"./pokemonSprites/charmander.png", Moves.moveList.get(0),Moves.moveList.get(1),Moves.moveList.get(2),Moves.moveList.get(3));
+    }
     static MainWindowGUI obj = new MainWindowGUI();
     static JButton loadButton;
     static JFrame frame;
@@ -24,7 +31,7 @@ public class MainWindowGUI implements ActionListener  {
     static ImageIcon imageLogo = new ImageIcon(".\\images\\PokemonMainLogo.png");
     static ImageIcon backgroundImage = new ImageIcon(".\\images\\Background.png");
     static Border border = BorderFactory.createRaisedBevelBorder();
-
+    static ImageIcon char_img = new ImageIcon(charmander.pokSprite);
     public static void main(String[] args) {
         createFrame();
     }
@@ -35,12 +42,13 @@ public class MainWindowGUI implements ActionListener  {
         newButton = new JButton();
         exitButton = new JButton();
         JPanel panel = new JPanel();
-        // JPanel bgPanel = new JPanel();
         JPanel panel1 = new JPanel();
         JPanel panel2 = new JPanel();
         JPanel panel3 = new JPanel();
         JPanel panel4 = new JPanel();
+        JPanel panel5 = new JPanel();
         JLabel label = new JLabel(); // create label and title
+        JLabel charlabel = new JLabel(); // create label and title
 
         /////////////////////////////////////////////       FRAME     //////////////////////////////////////////////////////////
 
@@ -60,6 +68,14 @@ public class MainWindowGUI implements ActionListener  {
         panel.setBorder(BorderFactory.createLineBorder(Color.RED));
         panel.setLayout(null);
         frame.add(panel);
+        panel5.setBackground(new Color(0, 0, 100));
+        panel5.setBounds(1000, 5, 50, 100);
+        panel.add(panel5);
+        charlabel.setIcon(char_img);
+        charlabel.setVerticalAlignment(JLabel.TOP);
+        charlabel.setHorizontalAlignment(JLabel.RIGHT);
+        panel5.add(charlabel);
+        
 
         panel4.setBackground(new Color(0, 0, 100));
         panel4.setBounds(222, 5, 1000, 300);
