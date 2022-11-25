@@ -5,22 +5,28 @@ import java.awt.image.BufferedImage;
 
 public class Pokemon {
     public int pokType, pokSpeed,pokCost, pokLevel;
-    public BufferedImage pokSprite;
+    public String pokSprite;
     public String pokName;
-    public Moves pokMoves[] = new Moves[4]; 
+    public Moves move1;
+    public Moves move2;
+    public Moves move3;
+    public Moves move4;
 
     //to store data of all poks as a list of objects
     public static ArrayList<Pokemon> pokList=new ArrayList<>();
     
     //initializes object of pok data
-    Pokemon(String pokName, int pokType, int pokSpeed, int pokLevel, int pokCost, BufferedImage pokSprite, Moves[] pokMoves){
+    public Pokemon(String pokName, int pokType, int pokSpeed, int pokLevel, int pokCost, String pokSprite,Moves move1, Moves move2,Moves move3,Moves move4){
         this.pokName=pokName;
         this.pokType=pokType;
         this.pokSpeed=pokSpeed;
         this.pokLevel=pokLevel;
         this.pokCost=pokCost;
         this.pokSprite=pokSprite;
-        this.pokMoves=pokMoves;
+        this.move1 = move1;
+        this.move2 = move2;
+        this.move3 = move3;
+        this.move4 = move4;
     }
 
     public static void addPokemons(){
@@ -28,56 +34,56 @@ public class Pokemon {
         // ************************             FIRE TYPE            *************************
 
 
-        /*0*/Pokemon charmander=new Pokemon("Charmander",1,65, , ,"./pokemonSprites/charmander.png");
+        /*0*/Pokemon charmander=new Pokemon("Charmander",1,65, , 300 ,"./pokemonSprites/charmander.png");
         pokList.add(charmander);
 
-        /*1*/Pokemon vulpix=new Pokemon("Vulpix",1,65, , ,"./pokemonSprites/vulpix.png");
+        /*1*/Pokemon vulpix=new Pokemon("Vulpix",1,65, , 250 ,"./pokemonSprites/vulpix.png");
         pokList.add(vulpix);
         
-        /*2*/Pokemon growlithe=new Pokemon("Growlithe",1,60, , ,"./pokemonSprites/growlithe.png");
+        /*2*/Pokemon growlithe=new Pokemon("Growlithe",1,60, , 250 ,"./pokemonSprites/growlithe.png");
         pokList.add(growlithe);
         
-        /*3*/Pokemon ponyta=new Pokemon("Ponyta",1,90, , ,"./pokemonSprites/ponyta.png");
+        /*3*/Pokemon ponyta=new Pokemon("Ponyta",1,90, , 250 ,"./pokemonSprites/ponyta.png");
         pokList.add(ponyta);
 
-        /*4*/Pokemon magmar=new Pokemon("Magmar",1,93, , ,"./pokemonSprites/magmar.png");
+        /*4*/Pokemon magmar=new Pokemon("Magmar",1,93, , 300 ,"./pokemonSprites/magmar.png");
         pokList.add(magmar);
 
-        /*5*/Pokemon cyndaquil=new Pokemon("Cyndaquil",1,65, , ,"./pokemonSprites/cyndaquil.png");
+        /*5*/Pokemon cyndaquil=new Pokemon("Cyndaquil",1,65, , 300 ,"./pokemonSprites/cyndaquil.png");
         pokList.add(cyndaquil);
 
-        /*6*/Pokemon torchic=new Pokemon("Torchic",1,45, , ,"./pokemonSprites/torchic.png");
+        /*6*/Pokemon torchic=new Pokemon("Torchic",1,45, , 300 ,"./pokemonSprites/torchic.png");
         pokList.add(torchic);
 
-        /*7*/Pokemon fletchling =new Pokemon("Fletchling",1,62, , ,"./pokemonSprites/fletchling.png");
+        /*7*/Pokemon fletchling =new Pokemon("Fletchling",1,62, , 300 ,"./pokemonSprites/fletchling.png");
         pokList.add(fletchling);
         
-        /*8*/Pokemon litten=new Pokemon("Litten",1,70, , ,"./pokemonSprites/litten.png");
+        /*8*/Pokemon litten=new Pokemon("Litten",1,70, , 300 ,"./pokemonSprites/litten.png");
         pokList.add(litten);
 
         
         // ************************             WATER TYPE            *************************
 
 
-        /*9*/Pokemon squirtle=new Pokemon("Squirtle",2,43, , ,"./pokemonSprites/squirtle.png");
+        /*9*/Pokemon squirtle=new Pokemon("Squirtle",2,43, ,300 ,"./pokemonSprites/squirtle.png");
         pokList.add(squirtle);
         
-        /*10*/Pokemon psyduck=new Pokemon("Psyduck",2,55, , ,"./pokemonSprites/psyduck.png");
+        /*10*/Pokemon psyduck=new Pokemon("Psyduck",2,55, ,250 ,"./pokemonSprites/psyduck.png");
         pokList.add(psyduck);
         
-        /*11*/Pokemon krabby=new Pokemon("Krabby",2,50, , ,"./pokemonSprites/krabby.png");
+        /*11*/Pokemon krabby=new Pokemon("Krabby",2,50, ,250  ,"./pokemonSprites/krabby.png");
         pokList.add(krabby);
 
-        /*12*/Pokemon totodile=new Pokemon("Totodile",2,43, , ,"./pokemonSprites/totodile.png");
+        /*12*/Pokemon totodile=new Pokemon("Totodile",2,43, ,300 ,"./pokemonSprites/totodile.png");
         pokList.add(totodile);
 
-        /*13*/Pokemon mudkip=new Pokemon("Mudkip",2,40, , ,"./pokemonSprites/mudkip.png");
+        /*13*/Pokemon mudkip=new Pokemon("Mudkip",2,40, ,300 ,"./pokemonSprites/mudkip.png");
         pokList.add(mudkip);
         
-        /*14*/Pokemon froakie=new Pokemon("Froakie",2,71, , ,"./pokemonSprites/froakie.png");
+        /*14*/Pokemon froakie=new Pokemon("Froakie",2,71, ,300 ,"./pokemonSprites/froakie.png");
         pokList.add(froakie);
         
-        /*15*/Pokemon popplio=new Pokemon("Popplio",2,40, , ,"./pokemonSprites/popplio.png");
+        /*15*/Pokemon popplio=new Pokemon("Popplio",2,40, ,300 ,"./pokemonSprites/popplio.png");
         pokList.add(popplio);
 
 
@@ -85,137 +91,137 @@ public class Pokemon {
         // ************************             GRASS TYPE            *************************
 
 
-        /*16*/Pokemon bulbasaur=new Pokemon("Bulbasaur",3,45, , ,"./pokemonSprites/bulbasaur.png");
+        /*16*/Pokemon bulbasaur=new Pokemon("Bulbasaur",3,45, ,300 ,"./pokemonSprites/bulbasaur.png");
         pokList.add(bulbasaur);
 
-        /*17*/Pokemon chikorita=new Pokemon("Chikorita",3,45, , ,"./pokemonSprites/chikorita.png");
+        /*17*/Pokemon chikorita=new Pokemon("Chikorita",3,45, ,300 ,"./pokemonSprites/chikorita.png");
         pokList.add(chikorita);
 
-        /*18*/Pokemon treecko=new Pokemon("Treecko",3,70, , ,"./pokemonSprites/treecko.png");
+        /*18*/Pokemon treecko=new Pokemon("Treecko",3,70, ,300 ,"./pokemonSprites/treecko.png");
         pokList.add(treecko);
         
-        /*19*/Pokemon rowlet=new Pokemon("Rowlet",3,42, , ,"./pokemonSprites/rowlet.png");
+        /*19*/Pokemon rowlet=new Pokemon("Rowlet",3,42, ,300 ,"./pokemonSprites/rowlet.png");
         pokList.add(rowlet);
         
         // ************************             FLYING TYPE            *************************
 
 
-        /*20*/Pokemon pidgey=new Pokemon("Pidgey",4,56, , ,"./pokemonSprites/pidgey.png");
+        /*20*/Pokemon pidgey=new Pokemon("Pidgey",4,56, ,300 ,"./pokemonSprites/pidgey.png");
         pokList.add(pidgey);
 
-        /*21*/Pokemon starly=new Pokemon("Starly",4,60, , ,"./pokemonSprites/starly-f.png");
+        /*21*/Pokemon starly=new Pokemon("Starly",4,60, ,300 ,"./pokemonSprites/starly-f.png");
         pokList.add(starly);
 
         // ************************             ELECTRIC TYPE            *************************
         
 
-        /*22*/Pokemon pikachu=new Pokemon("Pikachu",5,90, , ,"./pokemonSprites/pikachu-f.png");
+        /*22*/Pokemon pikachu=new Pokemon("Pikachu",5,90, ,300 ,"./pokemonSprites/pikachu-f.png");
         pokList.add(pikachu);
 
-        /*23*/Pokemon electabuzz=new Pokemon("Electabuzz",5,105, , ,"./pokemonSprites/electabuzz.png");
+        /*23*/Pokemon electabuzz=new Pokemon("Electabuzz",5,105, ,300 ,"./pokemonSprites/electabuzz.png");
         pokList.add(electabuzz);
 
-        /*24*/Pokemon electrike=new Pokemon("Electrike",5,65, , ,"./pokemonSprites/electrike.png");
+        /*24*/Pokemon electrike=new Pokemon("Electrike",5,65, ,250 ,"./pokemonSprites/electrike.png");
         pokList.add(electrike);
 
 
         // ************************             GROUND TYPE            *************************
         
 
-        /*25*/Pokemon sandshrew=new Pokemon("Sandshrew",6,40, , ,"./pokemonSprites/sandshrew.png");
+        /*25*/Pokemon sandshrew=new Pokemon("Sandshrew",6,40, ,250 ,"./pokemonSprites/sandshrew.png");
         pokList.add(sandshrew);
         
-        /*26*/Pokemon diglet=new Pokemon("Diglet",6,95, , ,"./pokemonSprites/diglett.png");
+        /*26*/Pokemon diglet=new Pokemon("Diglet",6,95, ,250 ,"./pokemonSprites/diglett.png");
         pokList.add(diglet);
 
-        /*27*/Pokemon cubone=new Pokemon("Cubone",6,35, , ,"./pokemonSprites/cubone.png");
+        /*27*/Pokemon cubone=new Pokemon("Cubone",6,35, ,250 ,"./pokemonSprites/cubone.png");
         pokList.add(cubone);
         
         // ************************             PSYCHIC TYPE            *************************
 
 
-        /*28*/Pokemon abra=new Pokemon("Abra",7,90, , ,"./pokemonSprites/abra.png");
+        /*28*/Pokemon abra=new Pokemon("Abra",7,90, ,300 ,"./pokemonSprites/abra.png");
         pokList.add(abra);
         
-        /*29*/Pokemon ralts=new Pokemon("Ralts",7,40, , ,"./pokemonSprites/ralts.png");
+        /*29*/Pokemon ralts=new Pokemon("Ralts",7,40, ,300 ,"./pokemonSprites/ralts.png");
         pokList.add(ralts);
 
-        /*30*/Pokemon gothita =new Pokemon("Gothita",7,45, , ,"./pokemonSprites/gothita.png");
+        /*30*/Pokemon gothita =new Pokemon("Gothita",7,45, ,250 ,"./pokemonSprites/gothita.png");
         pokList.add(gothita);
 
         
         // ************************             FIGHTING TYPE            *************************
 
 
-        /*31*/Pokemon machop=new Pokemon("Machop",8,35, , ,"./pokemonSprites/machop.png");
+        /*31*/Pokemon machop=new Pokemon("Machop",8,35, ,250 ,"./pokemonSprites/machop.png");
         pokList.add(machop);
 
-        /*32*/Pokemon makuhita=new Pokemon("Makuhita",8,25, , ,"./pokemonSprites/makuhita.png");
+        /*32*/Pokemon makuhita=new Pokemon("Makuhita",8,25, ,250 ,"./pokemonSprites/makuhita.png");
         pokList.add(makuhita);
         
-        /*33*/Pokemon timburr=new Pokemon("Timburr",8,35, , ,"./pokemonSprites/timburr.png");
+        /*33*/Pokemon timburr=new Pokemon("Timburr",8,35, ,250 ,"./pokemonSprites/timburr.png");
         pokList.add(timburr);
 
         
         // ************************             POISON TYPE            *************************
 
 
-        /*34*/Pokemon grimer=new Pokemon("Grimer",9,25, , ,"./pokemonSprites/grimer.png");
+        /*34*/Pokemon grimer=new Pokemon("Grimer",9,25, ,250 ,"./pokemonSprites/grimer.png");
         pokList.add(grimer);
         
         
         // ************************             NORMAL TYPE            *************************
         
         
-        /*35*/Pokemon tauros=new Pokemon("Tauros",10,110, , ,"./pokemonSprites/tauros.png");
+        /*35*/Pokemon tauros=new Pokemon("Tauros",10,110, ,250 ,"./pokemonSprites/tauros.png");
         pokList.add(tauros);
 
-        /*36*/Pokemon snorlax=new Pokemon("Snorlax",10,30, , ,"./pokemonSprites/snorlax.png");
+        /*36*/Pokemon snorlax=new Pokemon("Snorlax",10,30, ,300 ,"./pokemonSprites/snorlax.png");
         pokList.add(snorlax);
 
-        /*37*/Pokemon porygon2=new Pokemon("Porygon2",10,60, , ,"./pokemonSprites/porygon2.png");
+        /*37*/Pokemon porygon2=new Pokemon("Porygon2",10,60, ,300 ,"./pokemonSprites/porygon2.png");
         pokList.add(porygon2);
     
 
         // ************************             ROCK TYPE            *************************
 
 
-        /*38*/Pokemon sudowoodo=new Pokemon("Sudowoodo",11,30, , ,"./pokemonSprites/sudowoodo-f.png");
+        /*38*/Pokemon sudowoodo=new Pokemon("Sudowoodo",11,30, ,250 ,"./pokemonSprites/sudowoodo-f.png");
         pokList.add(sudowoodo);
 
-        /*39*/Pokemon roggenrola=new Pokemon("Roggenrola",11,20, , ,"./pokemonSprites/roggenrola.png");
+        /*39*/Pokemon roggenrola=new Pokemon("Roggenrola",11,20, ,250 ,"./pokemonSprites/roggenrola.png");
         pokList.add(roggenrola);
      
-        /*40*/Pokemon rockruff=new Pokemon("Rockruff",11,60, , ,"./pokemonSprites/rockruff.png");
+        /*40*/Pokemon rockruff=new Pokemon("Rockruff",11,60, ,300 ,"./pokemonSprites/rockruff.png");
         pokList.add(rockruff);
         
         
         //  ***********************             DARK TYPE            *************************
 
 
-        /*41*/Pokemon poochyena=new Pokemon("Poochyena",12,35, , ,"./pokemonSprites/poochyena.png");
+        /*41*/Pokemon poochyena=new Pokemon("Poochyena",12,35, ,250 ,"./pokemonSprites/poochyena.png");
         pokList.add(poochyena);
 
-        /*42*/Pokemon absol=new Pokemon("Absol",12,75, , ,"./pokemonSprites/absol.png");
+        /*42*/Pokemon absol=new Pokemon("Absol",12,75, ,300 ,"./pokemonSprites/absol.png");
         pokList.add(absol);
 
 
         // ************************             DRAGON TYPE            *************************
 
 
-        /*43*/Pokemon bagon=new Pokemon("Bagon",13,50, , ,"./pokemonSprites/bagon.png");
+        /*43*/Pokemon bagon=new Pokemon("Bagon",13,50, ,350 ,"./pokemonSprites/bagon.png");
         pokList.add(bagon);
 
-        /*44*/Pokemon dratini=new Pokemon("Dratini",13,50, , ,"./pokemonSprites/dratini.png");
+        /*44*/Pokemon dratini=new Pokemon("Dratini",13,50, ,350 ,"./pokemonSprites/dratini.png");
         pokList.add(dratini);
         
-        /*45*/Pokemon axew=new Pokemon("Axew",13,57, , ,"./pokemonSprites/axew.png");
+        /*45*/Pokemon axew=new Pokemon("Axew",13,57, ,350 ,"./pokemonSprites/axew.png");
         pokList.add(axew);
 
-        /*46*/Pokemon gible=new Pokemon("Gible",13,42, , ,"./pokemonSprites/gible.png");
+        /*46*/Pokemon gible=new Pokemon("Gible",13,42, ,350 ,"./pokemonSprites/gible.png");
         pokList.add(gible);
         
-        /*47*/Pokemon goomy=new Pokemon("Goomy",13,40, , ,"./pokemonSprites/goomy.png");
+        /*47*/Pokemon goomy=new Pokemon("Goomy",13,40, ,350 ,"./pokemonSprites/goomy.png");
         pokList.add(goomy);
 
 
@@ -223,10 +229,10 @@ public class Pokemon {
         // ************************             GHOST TYPE            *************************
 
 
-        /*48*/Pokemon gastly=new Pokemon("Gastly",14,80, , ,"./pokemonSprites/gastly.png");
+        /*48*/Pokemon gastly=new Pokemon("Gastly",14,80, ,300 ,"./pokemonSprites/gastly.png");
         pokList.add(gastly);
         
-        /*49*/Pokemon duskull=new Pokemon("Duskull",14,20, , ,"./pokemonSprites/duskull.png");
+        /*49*/Pokemon duskull=new Pokemon("Duskull",14,20, ,300 ,"./pokemonSprites/duskull.png");
         pokList.add(duskull);
 
 
