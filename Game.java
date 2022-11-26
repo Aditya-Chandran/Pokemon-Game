@@ -15,6 +15,9 @@ class PokemonGame{
             String userName=user.newUser();
             SelectPokemon.SelectPok(userName);
         }
+        else if(opt.equalsIgnoreCase("L")){
+            
+        }
     }
 }
 
