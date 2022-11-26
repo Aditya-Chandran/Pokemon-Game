@@ -1,0 +1,5 @@
+Totodile
+2
+43
+40
+./pokemonSprites/totodile.png
