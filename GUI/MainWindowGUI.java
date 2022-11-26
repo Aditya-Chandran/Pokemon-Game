@@ -68,13 +68,13 @@ public class MainWindowGUI implements ActionListener  {
         panel.setBorder(BorderFactory.createLineBorder(Color.RED));
         panel.setLayout(null);
         frame.add(panel);
-        panel5.setBackground(new Color(0, 0, 100));
-        panel5.setBounds(1000, 5, 50, 100);
-        panel.add(panel5);
-        charlabel.setIcon(char_img);
-        charlabel.setVerticalAlignment(JLabel.TOP);
-        charlabel.setHorizontalAlignment(JLabel.RIGHT);
-        panel5.add(charlabel);
+        // panel5.setBackground(new Color(0, 0, 100));
+        // panel5.setBounds(1000, 5, 50, 100);
+        // panel.add(panel5);
+        // charlabel.setIcon(char_img);
+        // charlabel.setVerticalAlignment(JLabel.TOP);
+        // charlabel.setHorizontalAlignment(JLabel.RIGHT);
+        // panel5.add(charlabel);
         
 
         panel4.setBackground(new Color(0, 0, 100));
