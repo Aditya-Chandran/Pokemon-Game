@@ -108,7 +108,7 @@ public class NewWindow implements ActionListener{
         if (e.getSource()==enterButton){
             System.out.println(NameText.getText());
             newFrame.setVisible(false);
-            BattleWindow.battle();
+            DifficultyWindow.createDW();
         }
     }
 }
