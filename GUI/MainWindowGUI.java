@@ -57,7 +57,6 @@ public class MainWindowGUI implements ActionListener  {
         frame.setResizable(false); // Prevent frame from resize
         frame.setIconImage(imageTitle.getImage()); // create icon of frame
         frame.getContentPane().setBackground(new Color(0, 0, 100)); // change color background
-        frame.setVisible(true); // make frame visible
         frame.setLayout(null);
 
         ////////////////////////////////////////////        PANEL      ///////////////////////////////////////////////////////////
@@ -132,6 +131,9 @@ public class MainWindowGUI implements ActionListener  {
         label.setVerticalAlignment(JLabel.TOP);
         label.setHorizontalAlignment(JLabel.CENTER);
         panel4.add(label); // add label to panel
+
+        frame.setVisible(true); // make frame visible
+
     }
     
     @Override
