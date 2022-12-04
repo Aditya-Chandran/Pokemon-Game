@@ -17,6 +17,7 @@ public class BattleWindow implements ActionListener{
     static JButton moveButton4 = new JButton();
     static ImageIcon userLogo = new ImageIcon(".\\pokemonSprites\\abra.png");
     static ImageIcon oppLogo = new ImageIcon(".\\pokemonSprites\\axew.png");
+    static int i=0;
     public static void main(String[] args) {
         battle();
     }
@@ -142,7 +143,7 @@ public class BattleWindow implements ActionListener{
     @Override
     public void actionPerformed(ActionEvent e) {
         if (e.getSource()==Button2){
-            MainWindowGUI.frame.setVisible(true);
+            DifficultyWindow.createDW();
             battleFrame.setVisible(false);
         }
     }
