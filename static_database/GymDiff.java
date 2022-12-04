@@ -10,13 +10,13 @@ class GymDiff1 extends GymDiff{
         Pokemon.addPokemons();
         
         Pokemon krabby=Pokemon.pokList.get(11);
-        krabby.pokLevel=3;
+        krabby.pokLevel=50;
 
         Pokemon gothita=Pokemon.pokList.get(30);
-        gothita.pokLevel=4;
+        gothita.pokLevel=50;
 
         Pokemon vulpix=Pokemon.pokList.get(1);
-        vulpix.pokLevel=2;
+        vulpix.pokLevel=50;
 
         gymPok[0]=krabby;
         gymPok[1]=gothita;
@@ -31,13 +31,13 @@ class GymDiff2 extends GymDiff{
         Pokemon.addPokemons();
         
         Pokemon sandshrew=Pokemon.pokList.get(25);
-        sandshrew.pokLevel=9;
+        sandshrew.pokLevel=50;
 
         Pokemon squirtle=Pokemon.pokList.get(9);
-        squirtle.pokLevel=11;
+        squirtle.pokLevel=50;
 
         Pokemon pidgey=Pokemon.pokList.get(20);
-        pidgey.pokLevel=13;
+        pidgey.pokLevel=50;
 
         gymPok[0]=sandshrew;
         gymPok[1]=squirtle;
@@ -53,13 +53,13 @@ class GymDiff3 extends GymDiff{
         Pokemon.addPokemons();
         
         Pokemon poochyena=Pokemon.pokList.get(41);
-        poochyena.pokLevel=25;
+        poochyena.pokLevel=50;
 
         Pokemon electrike=Pokemon.pokList.get(24);
-        electrike.pokLevel=27;
+        electrike.pokLevel=50;
 
         Pokemon tauros=Pokemon.pokList.get(35);
-        tauros.pokLevel=18;
+        tauros.pokLevel=50;
 
         gymPok[0]=poochyena;
         gymPok[1]=electrike;
@@ -74,13 +74,13 @@ class GymDiff4 extends GymDiff{
         Pokemon.addPokemons();
         
         Pokemon gastly=Pokemon.pokList.get(48);
-        gastly.pokLevel=30;
+        gastly.pokLevel=50;
 
         Pokemon roggenrola=Pokemon.pokList.get(39);
-        roggenrola.pokLevel=40;
+        roggenrola.pokLevel=50;
 
         Pokemon magmar=Pokemon.pokList.get(4);
-        magmar.pokLevel=49;
+        magmar.pokLevel=50;
 
         gymPok[0]=gastly;
         gymPok[1]=roggenrola;
@@ -95,13 +95,13 @@ class GymDiff5 extends GymDiff{
         Pokemon.addPokemons();
         
         Pokemon bagon=Pokemon.pokList.get(43);
-        bagon.pokLevel=60;
+        bagon.pokLevel=55;
 
         Pokemon snorlax=Pokemon.pokList.get(36);
-        snorlax.pokLevel=65;
+        snorlax.pokLevel=55;
 
         Pokemon absol=Pokemon.pokList.get(42);
-        absol.pokLevel=80;
+        absol.pokLevel=55;
 
         gymPok[0]=bagon;
         gymPok[1]=snorlax;
