@@ -1,10 +1,9 @@
-package mechanics;
+package static_database;
 
-import static_database.*;
 import java.util.*;
 
 public class SelectPokemon {
-    public static Pokemon pokemonSet[][]=new Pokemon[5][3];
+    public static Pokemon pokemonSet[][]=new Pokemon[6][3];
     public static void addInSet(){
         Pokemon.addPokemons();
         ArrayList<Pokemon> pok=Pokemon.pokList;
