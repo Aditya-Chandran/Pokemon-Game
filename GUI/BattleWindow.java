@@ -1,6 +1,5 @@
 package GUI;
 import GUI.*;
-import mechanics.SelectPokemon;
 
 import javax.swing.*;
 import javax.swing.border.Border;

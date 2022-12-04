@@ -150,8 +150,8 @@ public class BattleMechanics{
                 }
             }
             
-            int x=i;
-            x=j;
+        
+            int x=j;
             if(gym[j].pokHealth<=0) x=checkPok(j,gym);
             if(x==4){
                 System.out.print("\n\n  ********** YOU WON ! *********\n");
@@ -196,6 +196,7 @@ public class BattleMechanics{
             System.out.println("\n    "+gym[j].pokName+" : "+gym[j].pokHealth);
 
             if(myPok[i].pokHealth<=0) x=checkPok(i,myPok);
+            x=i;
             if(x==4){
                 System.out.print("\n\n  **********  YOU LOST  *********\n");
                 break;

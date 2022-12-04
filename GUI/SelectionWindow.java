@@ -2,7 +2,7 @@ package GUI;
 
 import GUI.*;
 import mechanics.*;
-import static_database.Pokemon;
+import static_database.*;
 import javax.swing.*;
 import javax.swing.border.Border;
 import java.awt.event.ActionEvent;
