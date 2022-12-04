@@ -4,23 +4,22 @@ public class GymDiff{
     public String gymName;
     public Pokemon gymPok[]=new Pokemon[3];
 }
-
 class GymDiff1 extends GymDiff{
     public Pokemon[] addGymPokemons(){
         Pokemon.addPokemons();
         
-        Pokemon krabby=Pokemon.pokList.get(11);
-        krabby.pokLevel=50;
+        Pokemon magmar=Pokemon.pokList.get(4);
+        magmar.pokLevel=50;
 
-        Pokemon gothita=Pokemon.pokList.get(30);
-        gothita.pokLevel=50;
+        Pokemon ponyta=Pokemon.pokList.get(3);
+        ponyta.pokLevel=50;
 
         Pokemon vulpix=Pokemon.pokList.get(1);
         vulpix.pokLevel=50;
 
-        gymPok[0]=krabby;
-        gymPok[1]=gothita;
-        gymPok[2]=vulpix;
+        gymPok[0]=vulpix;
+        gymPok[1]=ponyta;
+        gymPok[2]=magmar;
 
         return gymPok;
     }
@@ -30,18 +29,18 @@ class GymDiff2 extends GymDiff{
     public Pokemon[] addGymPokemons(){
         Pokemon.addPokemons();
         
-        Pokemon sandshrew=Pokemon.pokList.get(25);
-        sandshrew.pokLevel=50;
+        Pokemon krabby=Pokemon.pokList.get(11);
+        krabby.pokLevel=50;
 
-        Pokemon squirtle=Pokemon.pokList.get(9);
-        squirtle.pokLevel=50;
+        Pokemon mudkip=Pokemon.pokList.get(13);
+        mudkip.pokLevel=50;
 
-        Pokemon pidgey=Pokemon.pokList.get(20);
-        pidgey.pokLevel=50;
+        Pokemon froakie=Pokemon.pokList.get(14);
+        froakie.pokLevel=50;
 
-        gymPok[0]=sandshrew;
-        gymPok[1]=squirtle;
-        gymPok[2]=pidgey;
+        gymPok[0]=krabby;
+        gymPok[1]=mudkip;
+        gymPok[2]=froakie;
 
         return gymPok;
     }
@@ -52,18 +51,18 @@ class GymDiff3 extends GymDiff{
     public Pokemon[] addGymPokemons(){
         Pokemon.addPokemons();
         
-        Pokemon poochyena=Pokemon.pokList.get(41);
-        poochyena.pokLevel=50;
+        Pokemon bulbasaur=Pokemon.pokList.get(16);
+        bulbasaur.pokLevel=50;
 
-        Pokemon electrike=Pokemon.pokList.get(24);
-        electrike.pokLevel=50;
+        Pokemon treecko=Pokemon.pokList.get(18);
+        treecko.pokLevel=50;
 
-        Pokemon tauros=Pokemon.pokList.get(35);
-        tauros.pokLevel=50;
+        Pokemon chikorita=Pokemon.pokList.get(17);
+        chikorita.pokLevel=50;
 
-        gymPok[0]=poochyena;
-        gymPok[1]=electrike;
-        gymPok[2]=tauros;
+        gymPok[0]=bulbasaur;
+        gymPok[1]=treecko;
+        gymPok[2]=chikorita;
         
         return gymPok;
     }
@@ -73,18 +72,19 @@ class GymDiff4 extends GymDiff{
     public Pokemon[] addGymPokemons(){
         Pokemon.addPokemons();
         
-        Pokemon gastly=Pokemon.pokList.get(48);
-        gastly.pokLevel=50;
+        Pokemon pikachu=Pokemon.pokList.get(59);
+        pikachu.pokLevel=50;
 
-        Pokemon roggenrola=Pokemon.pokList.get(39);
-        roggenrola.pokLevel=50;
+        Pokemon electabuzz=Pokemon.pokList.get(23);
+        electabuzz.pokLevel=50;
 
-        Pokemon magmar=Pokemon.pokList.get(4);
-        magmar.pokLevel=50;
+        Pokemon electrike=Pokemon.pokList.get(24);
+        electrike.pokLevel=50;
 
-        gymPok[0]=gastly;
-        gymPok[1]=roggenrola;
-        gymPok[2]=magmar;
+        gymPok[0]=pikachu;
+        gymPok[1]=electabuzz;
+        gymPok[2]=electrike;
+
 
         return gymPok;
     }
@@ -94,19 +94,20 @@ class GymDiff5 extends GymDiff{
     public Pokemon[] addGymPokemons(){
         Pokemon.addPokemons();
         
-        Pokemon bagon=Pokemon.pokList.get(43);
-        bagon.pokLevel=55;
+        Pokemon latios=Pokemon.pokList.get(22);
+        latios.pokLevel=55;
+     
+        Pokemon rayquaza=Pokemon.pokList.get(63);
+        rayquaza.pokLevel=55;
 
-        Pokemon snorlax=Pokemon.pokList.get(36);
-        snorlax.pokLevel=55;
+        Pokemon mewtwo=Pokemon.pokList.get(61);
+        mewtwo.pokLevel=55;
 
-        Pokemon absol=Pokemon.pokList.get(42);
-        absol.pokLevel=55;
-
-        gymPok[0]=bagon;
-        gymPok[1]=snorlax;
-        gymPok[2]=absol;
+        gymPok[0]=latios;
+        gymPok[1]=rayquaza;
+        gymPok[2]=mewtwo;
 
         return gymPok;
     }
 }
+
