@@ -58,6 +58,7 @@ public class MainWindowGUI implements ActionListener  {
         frame.setIconImage(imageTitle.getImage()); // create icon of frame
         frame.getContentPane().setBackground(new Color(0, 0, 100)); // change color background
         frame.setLayout(null);
+        frame.setLocationRelativeTo(null);
 
         ////////////////////////////////////////////        PANEL      ///////////////////////////////////////////////////////////
 
