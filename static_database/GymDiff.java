@@ -72,7 +72,7 @@ class GymDiff4 extends GymDiff{
     public Pokemon[] addGymPokemons(){
         Pokemon.addPokemons();
         
-        Pokemon pikachu=Pokemon.pokList.get(59);
+        Pokemon pikachu=Pokemon.pokList.get(22);
         pikachu.pokLevel=50;
 
         Pokemon electabuzz=Pokemon.pokList.get(23);
@@ -94,7 +94,7 @@ class GymDiff5 extends GymDiff{
     public Pokemon[] addGymPokemons(){
         Pokemon.addPokemons();
         
-        Pokemon latios=Pokemon.pokList.get(22);
+        Pokemon latios=Pokemon.pokList.get(59);
         latios.pokLevel=55;
      
         Pokemon rayquaza=Pokemon.pokList.get(63);

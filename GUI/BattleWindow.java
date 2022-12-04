@@ -1,5 +1,7 @@
 package GUI;
 import GUI.*;
+import mechanics.SelectPokemon;
+
 import javax.swing.*;
 import javax.swing.border.Border;
 import java.awt.event.ActionEvent;
@@ -8,7 +10,7 @@ import java.awt.*;
 import static_database.*;
 
 public class BattleWindow implements ActionListener{
-
+    
     static Border border = BorderFactory.createRaisedBevelBorder();
     static JFrame battleFrame = new JFrame();
     static BattleWindow obj2 = new BattleWindow();
@@ -17,16 +19,20 @@ public class BattleWindow implements ActionListener{
     static JButton moveButton2 = new JButton();
     static JButton moveButton3 = new JButton();
     static JButton moveButton4 = new JButton();
-    static ImageIcon userLogo = new ImageIcon(".\\pokemonSprites\\abra.png");
-    static ImageIcon oppLogo = new ImageIcon(".\\pokemonSprites\\axew.png");
-    static int i=0;
+    static ImageIcon backgroundImage = new ImageIcon(".\\images\\battleSequence.png");
+
+    
     public static void main(String[] args) {
         battle();
         
     }
-
+    
     public static void battle(){
+        SelectPokemon.addInSet();
+        DifficultyWindow.gymList=AllGyms.getGym(DifficultyWindow.gymIndex);
         Pokemon.addPokemons();
+        ImageIcon userLogo = new ImageIcon(SelectPokemon.pokemonSet[SelectionWindow.index][0].pokSprite);
+        ImageIcon oppLogo = new ImageIcon(DifficultyWindow.gymList.gymPok[0].pokSprite);
         JLabel pokeLabel1 = new JLabel();
         JLabel pokeLabel2 = new JLabel();
         JPanel Panel1 = new JPanel();
@@ -34,6 +40,7 @@ public class BattleWindow implements ActionListener{
         JPanel Panel3 = new JPanel();
         JPanel Panel4 = new JPanel();
         JPanel Panel5 = new JPanel();
+        JLabel bgLabel = new JLabel(); // create label and title
         JPanel homeButtonPanel = new JPanel();
         BattleWindow move1 = new BattleWindow();
         BattleWindow move2 = new BattleWindow();
@@ -62,7 +69,7 @@ public class BattleWindow implements ActionListener{
         battleFrame.add(Panel1);
         
         Panel2.setBounds(0,550, 1424, 258);
-        Panel2.setBackground(new Color(50,100,100));
+        Panel2.setBackground(new Color(0,100,100));
         Panel2.setBorder(BorderFactory.createLineBorder(Color.RED));
         Panel2.setLayout(null);
         Panel1.add(Panel2);
@@ -87,7 +94,7 @@ public class BattleWindow implements ActionListener{
         moveButton1.setLayout(null);
         moveButton1.addActionListener(obj2);
         moveButton1.setBounds(20,20,685,100);
-        moveButton1.setText(DifficultyWindow.oppPok.gymPok[0].move1.moveName);
+        moveButton1.setText("move1");
         moveButton1.setFont(new Font("consolas",Font.BOLD,30));
         Panel2.add(moveButton1);
         moveButton1.addActionListener(new BattleWindow());
@@ -129,24 +136,26 @@ public class BattleWindow implements ActionListener{
         Panel2.add(moveButton4);
 
         Panel3.setBounds(60,190, 300, 300);
-        Panel3.setBackground(new Color(0,0,100));
-        // Panel3.setBorder(BorderFactory.createLineBorder(Color.RED));
-        // Panel3.setLayout(null);
+        Panel3.setBackground(new Color(0,100,100));
         pokeLabel2.setIcon(userLogo);
-        pokeLabel2.setVerticalAlignment(JLabel.CENTER);
-        pokeLabel2.setHorizontalAlignment(JLabel.CENTER);
+        pokeLabel2.setVerticalAlignment(JLabel.BOTTOM);
+        pokeLabel2.setHorizontalAlignment(JLabel.RIGHT);        
+        Panel3.setBorder(BorderFactory.createLineBorder(Color.RED));
         Panel3.add(pokeLabel2);
         Panel1.add(Panel3);
 
         Panel4.setBounds(1020,50, 300,300);
-        Panel4.setBackground(new Color(0,0,100));
-        // Panel4.setBorder(BorderFactory.createLineBorder(Color.RED));
-        // Panel4.setLayout(null);
+        Panel4.setBackground(new Color(0,100,100));
         pokeLabel1.setIcon(oppLogo);
-        pokeLabel1.setVerticalAlignment(JLabel.CENTER);
-        pokeLabel1.setHorizontalAlignment(JLabel.CENTER);
+        pokeLabel1.setVerticalAlignment(JLabel.BOTTOM);
+        pokeLabel1.setHorizontalAlignment(JLabel.LEFT);        
+        Panel4.setBorder(BorderFactory.createLineBorder(Color.RED));
         Panel4.add(pokeLabel1);
         Panel1.add(Panel4);
+
+        bgLabel.setBounds(0,0,1440,850);
+        bgLabel.setIcon(backgroundImage);
+        Panel1.add(bgLabel);
         
     }
 
@@ -157,6 +166,15 @@ public class BattleWindow implements ActionListener{
             battleFrame.setVisible(false);
         }
         if (e.getSource()==moveButton1){
+            
+        }
+        if (e.getSource()==moveButton2){
+            
+        }
+        if (e.getSource()==moveButton3){
+            
+        }
+        if (e.getSource()==moveButton4){
             
         }
     }

@@ -2,11 +2,11 @@ package GUI;
 
 import javax.swing.*;
 import javax.swing.border.*;
+import mechanics.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import static_database.*;
-
 
 
 public class DifficultyWindow implements ActionListener {
@@ -23,8 +23,8 @@ public class DifficultyWindow implements ActionListener {
     static ImageIcon gym3 = new ImageIcon("./images/Gym3.png");
     static ImageIcon gym4 = new ImageIcon("./images/Gym4.png");
     static ImageIcon gym5 = new ImageIcon("./images/Gym5.png");
-
-
+    public static GymDiff gymList;
+    public static int gymIndex;
 
     public static void createDW()
     {   
@@ -245,39 +245,38 @@ public class DifficultyWindow implements ActionListener {
         createDW();
     }
 
-
-
     @Override
     public void actionPerformed(ActionEvent e) {
         if (e.getSource()==homeButton){
-            NewWindow.createNewFrame();
+            MainWindowGUI.createFrame();
             dwFrame.setVisible(false);
         }
         else if (e.getSource()== gym1Button){
-            AllGyms.getGym(1);
+            gymIndex=1;
             SelectionWindow.userSelection();
             dwFrame.setVisible(false);
         }
         else if (e.getSource()== gym2Button){
-            AllGyms.getGym(2);
+            gymIndex=2;
             SelectionWindow.userSelection();
             dwFrame.setVisible(false);
         }
         else if (e.getSource()== gym3Button){
-            AllGyms.getGym(3);
+            gymIndex=3;
             SelectionWindow.userSelection();
             dwFrame.setVisible(false);
         }
         else if (e.getSource()== gym4Button){
-            AllGyms.getGym(4);
+            gymIndex=4;
             SelectionWindow.userSelection();
             dwFrame.setVisible(false);
         }
         else if (e.getSource()== gym5Button){
-            AllGyms.getGym(5);
-            Pokemon userPok[]= SelectPokemon.pokemonSet[5];
-            BattleWindow.battle();
+            SelectPokemon.addInSet();
+            gymIndex=5;
+            SelectionWindow.index=5;
             dwFrame.setVisible(false);
+            BattleWindow.battle();
         }
 
     }
