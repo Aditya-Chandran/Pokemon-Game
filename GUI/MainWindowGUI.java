@@ -127,16 +127,14 @@ public class MainWindowGUI implements ActionListener  {
         panel4.add(label); // add label to panel
 
         frame.setVisible(true); // make frame visible
-        
-
     }
     
     @Override
     public void actionPerformed(ActionEvent e) {
         if (e.getSource()==newButton){
-            // NewWindow.createNewFrame();
-            // frame.setVisible(false);
-            SwingUtilities.updateComponentTreeUI(frame);
+            NewWindow.createNewFrame();
+            frame.setVisible(false);
+            // SwingUtilities.updateComponentTreeUI(frame);
         }
     }
 }

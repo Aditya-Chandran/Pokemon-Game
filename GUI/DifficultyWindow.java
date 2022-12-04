@@ -5,6 +5,7 @@ import javax.swing.border.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import static_database.*;
 
 
 
@@ -17,6 +18,8 @@ public class DifficultyWindow implements ActionListener {
     static Border border = BorderFactory.createRaisedBevelBorder();
     static ImageIcon icon = new ImageIcon("./images/Background.png"); 
     static ImageIcon iconHead = new ImageIcon("./images/PokemonMainLogo.png");
+    public static GymDiff oppPok;
+    
 
 
     public static void createDW()
@@ -48,10 +51,7 @@ public class DifficultyWindow implements ActionListener {
         PANEL.setBounds(0, 0, 1920, 1080);
         PANEL.setBorder(BorderFactory.createLineBorder(Color.RED));
         PANEL.setLayout(null);
-        dwFrame.add(PANEL);
-
-
-        
+        dwFrame.add(PANEL);        
         
         ////////////////////        gym1Panel       //////////////////////
         
@@ -120,6 +120,7 @@ public class DifficultyWindow implements ActionListener {
         gym1Button.setText("GYM 1 : EASY");
         gym1Button.setFocusable(false);
         gym1Button.setBorder(border);
+        gym1Button.addActionListener(new DifficultyWindow());
         gym1Panel.add(gym1Button);
         
         
@@ -213,6 +214,11 @@ public class DifficultyWindow implements ActionListener {
             dwFrame.setVisible(false);
         }
 
-        
+        if (e.getSource()==gym1Button){
+            
+            oppPok = AllGyms.getGym(1);
+            dwFrame.setVisible(false);
+            BattleWindow.battle();
+        }
     }
 }

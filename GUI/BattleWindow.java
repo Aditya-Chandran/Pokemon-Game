@@ -5,8 +5,10 @@ import javax.swing.border.Border;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.*;
+import static_database.*;
 
 public class BattleWindow implements ActionListener{
+
     static Border border = BorderFactory.createRaisedBevelBorder();
     static JFrame battleFrame = new JFrame();
     static BattleWindow obj2 = new BattleWindow();
@@ -17,11 +19,14 @@ public class BattleWindow implements ActionListener{
     static JButton moveButton4 = new JButton();
     static ImageIcon userLogo = new ImageIcon(".\\pokemonSprites\\abra.png");
     static ImageIcon oppLogo = new ImageIcon(".\\pokemonSprites\\axew.png");
+
     public static void main(String[] args) {
         battle();
+        
     }
 
     public static void battle(){
+        Pokemon.addPokemons();
         JLabel pokeLabel1 = new JLabel();
         JLabel pokeLabel2 = new JLabel();
         JPanel Panel1 = new JPanel();
@@ -30,6 +35,10 @@ public class BattleWindow implements ActionListener{
         JPanel Panel4 = new JPanel();
         JPanel Panel5 = new JPanel();
         JPanel homeButtonPanel = new JPanel();
+        BattleWindow move1 = new BattleWindow();
+        BattleWindow move2 = new BattleWindow();
+        BattleWindow move3 = new BattleWindow();
+        BattleWindow move4 = new BattleWindow();
         Button2 = new JButton();
         moveButton1 = new JButton();
         moveButton2 = new JButton();
@@ -78,9 +87,10 @@ public class BattleWindow implements ActionListener{
         moveButton1.setLayout(null);
         moveButton1.addActionListener(obj2);
         moveButton1.setBounds(20,20,685,100);
-        moveButton1.setText("MOVE 1");
+        moveButton1.setText(DifficultyWindow.oppPok.gymPok[0].move1.moveName);
         moveButton1.setFont(new Font("consolas",Font.BOLD,30));
         Panel2.add(moveButton1);
+        moveButton1.addActionListener(new BattleWindow());
         
         moveButton2.setPreferredSize(new Dimension(100, 100));
         moveButton2.setBackground(Color.GRAY);
@@ -89,7 +99,7 @@ public class BattleWindow implements ActionListener{
         moveButton2.setLayout(null);
         moveButton2.addActionListener(obj2);
         moveButton2.setBounds(715,20,685,100);
-        moveButton2.setText("MOVE 2");
+        moveButton2.setText("move2");
         moveButton2.setForeground(Color.BLACK);
         moveButton2.setFont(new Font("consolas",Font.BOLD,30));
         Panel2.add(moveButton2);
@@ -101,7 +111,7 @@ public class BattleWindow implements ActionListener{
         moveButton3.setLayout(null);
         moveButton3.addActionListener(obj2);
         moveButton3.setBounds(20,130,685,100);
-        moveButton3.setText("MOVE 3");
+        moveButton3.setText("move3");
         moveButton3.setForeground(Color.BLACK);
         moveButton3.setFont(new Font("consolas",Font.BOLD,30));
         Panel2.add(moveButton3);
@@ -113,14 +123,14 @@ public class BattleWindow implements ActionListener{
         moveButton4.setLayout(null);
         moveButton4.addActionListener(obj2);
         moveButton4.setBounds(715,130,685,100);
-        moveButton4.setText("MOVE 4");
+        moveButton4.setText("move4");
         moveButton4.setFont(new Font("consolas",Font.BOLD,30));
         moveButton4.setForeground(Color.BLACK);
         Panel2.add(moveButton4);
 
         Panel3.setBounds(60,190, 300, 300);
-        Panel3.setBackground(new Color(50,100,100));
-        Panel3.setBorder(BorderFactory.createLineBorder(Color.RED));
+        Panel3.setBackground(new Color(0,0,100));
+        // Panel3.setBorder(BorderFactory.createLineBorder(Color.RED));
         // Panel3.setLayout(null);
         pokeLabel2.setIcon(userLogo);
         pokeLabel2.setVerticalAlignment(JLabel.CENTER);
@@ -129,8 +139,8 @@ public class BattleWindow implements ActionListener{
         Panel1.add(Panel3);
 
         Panel4.setBounds(1020,50, 300,300);
-        Panel4.setBackground(new Color(50,100,100));
-        Panel4.setBorder(BorderFactory.createLineBorder(Color.RED));
+        Panel4.setBackground(new Color(0,0,100));
+        // Panel4.setBorder(BorderFactory.createLineBorder(Color.RED));
         // Panel4.setLayout(null);
         pokeLabel1.setIcon(oppLogo);
         pokeLabel1.setVerticalAlignment(JLabel.CENTER);
@@ -145,6 +155,9 @@ public class BattleWindow implements ActionListener{
         if (e.getSource()==Button2){
             MainWindowGUI.frame.setVisible(true);
             battleFrame.setVisible(false);
+        }
+        if (e.getSource()==moveButton1){
+            
         }
     }
 }
