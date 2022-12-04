@@ -40,6 +40,8 @@ public class NewWindow implements ActionListener{
         newFrame.getContentPane().setBackground(new Color(0, 0, 100)); // change color background
         newFrame.setVisible(true); // make newFrame visible
         newFrame.setLayout(null);
+        newFrame.setLocationRelativeTo(null);
+
 
         homeButtonPanel.setBounds(8, 8, 50, 50);
         homeButtonPanel.setBackground(new Color(0,0,100));

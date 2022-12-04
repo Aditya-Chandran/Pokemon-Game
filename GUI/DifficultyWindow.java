@@ -1,9 +1,7 @@
 package GUI;
 
-import javax.imageio.ImageIO;
 import javax.swing.*;
 import javax.swing.border.*;
-
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -32,6 +30,7 @@ public class DifficultyWindow implements ActionListener {
         dwFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);// exit the program on close
         dwFrame.setLayout(null);
         dwFrame.setTitle("Pokemon");
+        dwFrame.setLocationRelativeTo(null);
         
         //////////////////////////////////////////////    PANELS     ///////////////////////////////////////////////////////////
         PANEL = new JPanel();
@@ -41,7 +40,6 @@ public class DifficultyWindow implements ActionListener {
         gym4Panel = new JPanel();
         gym5Panel = new JPanel();
 
-        
         
         /////////////////////       mainPanel       ///////////////////////
         

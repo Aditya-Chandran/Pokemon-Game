@@ -44,6 +44,7 @@ public class BattleWindow implements ActionListener{
         battleFrame.getContentPane().setBackground(new Color(0, 0, 100)); // change color background
         battleFrame.setVisible(true); // make newFrame visible
         battleFrame.setLayout(null);
+        battleFrame.setLocationRelativeTo(null);
         
         Panel1.setBounds(0, 0, 1424, 808);
         Panel1.setBackground(new Color(0,0,100));

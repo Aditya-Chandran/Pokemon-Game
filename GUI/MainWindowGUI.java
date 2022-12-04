@@ -58,6 +58,7 @@ public class MainWindowGUI implements ActionListener  {
         frame.setIconImage(imageTitle.getImage()); // create icon of frame
         frame.getContentPane().setBackground(new Color(0, 0, 100)); // change color background
         frame.setLayout(null);
+        frame.setLocationRelativeTo(null);
 
         ////////////////////////////////////////////        PANEL      ///////////////////////////////////////////////////////////
 
@@ -67,13 +68,6 @@ public class MainWindowGUI implements ActionListener  {
         panel.setBorder(BorderFactory.createLineBorder(Color.RED));
         panel.setLayout(null);
         frame.add(panel);
-        // panel5.setBackground(new Color(0, 0, 100));
-        // panel5.setBounds(1000, 5, 50, 100);
-        // panel.add(panel5);
-        // charlabel.setIcon(char_img);
-        // charlabel.setVerticalAlignment(JLabel.TOP);
-        // charlabel.setHorizontalAlignment(JLabel.RIGHT);
-        // panel5.add(charlabel);
         
 
         panel4.setBackground(new Color(0, 0, 100));
@@ -133,14 +127,16 @@ public class MainWindowGUI implements ActionListener  {
         panel4.add(label); // add label to panel
 
         frame.setVisible(true); // make frame visible
+        
 
     }
     
     @Override
     public void actionPerformed(ActionEvent e) {
         if (e.getSource()==newButton){
-            NewWindow.createNewFrame();
-            frame.setVisible(false);
+            // NewWindow.createNewFrame();
+            // frame.setVisible(false);
+            SwingUtilities.updateComponentTreeUI(frame);
         }
     }
 }
