@@ -5,18 +5,19 @@ import java.util.*;
 import java.util.concurrent.*;
 
 public class BattleMechanics{
-    static int i=0,j=0;
-    public static void changeData(Pokemon pok){
-        Pokemon poki=pok;
-        poki.pokHealth*=poki.pokLevel/5;
-        poki.move1.moveDamage*=poki.pokLevel/60;
-        poki.move2.moveDamage*=poki.pokLevel/60;
-        poki.move3.moveDamage*=poki.pokLevel/60;
-        poki.move4.moveDamage*=poki.pokLevel/60;
+    public static int[] changeData(Pokemon pok){
+        pok.pokHealth*=pok.pokLevel/5f;
+        pok.move1.moveDamage*=pok.pokLevel/50f;
+        pok.move2.moveDamage*=pok.pokLevel/50f;
+        pok.move3.moveDamage*=pok.pokLevel/50f;
+        pok.move4.moveDamage*=pok.pokLevel/50f;
+        int a[]={pok.pokHealth,pok.move1.moveDamage,pok.move2.moveDamage,pok.move3.moveDamage,pok.move4.moveDamage};
+        return a;
     }
 
     public static int doDamage(Moves move, Pokemon pok){
         int damageGiven=move.moveDamage;
+
         if(move.moveType==1){
             if(pok.pokType==3) damageGiven*=1.5;
             else if(pok.pokType==2||pok.pokType==6||pok.pokType==11||pok.pokType==13) damageGiven*=0.5;
@@ -67,67 +68,147 @@ public class BattleMechanics{
         else if(move.moveType==14){
             if(pok.pokType==7||pok.pokType==14) damageGiven*=1.5;
         }
+        
         return damageGiven;
     }
 
     public static void round(Pokemon gym[],Pokemon myPok[]){
-        System.out.print("\n  ---------------------------- BATTLE SEQUENCE ----------------------------");
-        System.out.print("\n    xxxxxxxxx "+myPok[i].pokName+" VS "+gym[j].pokName+" xxxxxxxxx");
         Scanner input=new Scanner(System.in);
+        int i=0,j=0,k=1;
+
+        System.out.print("\n  ---------------------------- BATTLE SEQUENCE ----------------------------");
+        System.out.print("\n    xxxxxxxxx "+myPok[i].pokName+" VS "+gym[j].pokName+" xxxxxxxxx\n");
+        System.out.print("\n    HEALTH\n");
+        System.out.println("\n    "+myPok[i].pokName+" : "+myPok[i].pokHealth);
+        System.out.println("\n    "+gym[j].pokName+" : "+gym[j].pokHealth);
+        
         while(true){
+            
+            System.out.println("\n  ______________ TURN "+k+" _______________");
+            k++;
+            
+            int damage=0;
+            Moves currMove=myPok[i].move1;
+            
             System.out.print("\n    (1) "+myPok[i].move1.moveName+"  (2) "+myPok[i].move2.moveName+"  (3) "+myPok[i].move3.moveName+"  (4) "+myPok[i].move4.moveName+"  (S) Switch Pokemon");
             while(true){
                 System.out.print("\n  >>> ");
                 String opt=input.next();
                 if(opt.equalsIgnoreCase("S")){
                     i=switchPok(myPok); 
-                    System.out.print("\n   xxxxxxxxx "+myPok[i].pokName+" VS "+gym[j].pokName+" xxxxxxxxx");
+                    System.out.print("\n   xxxxxxxxx "+myPok[i].pokName+" VS "+gym[j].pokName+" xxxxxxxxx\n");
+                    System.out.print("\n    HEALTH\n");
+                    System.out.println("\n     "+myPok[i].pokName+" : "+myPok[i].pokHealth);
+                    if(gym[j].pokHealth<=0) System.out.println("\n     "+gym[j].pokName+" : "+0);
+                    else System.out.println("\n     "+gym[j].pokName+" : "+gym[j].pokHealth);
+                    
                     break;
                 }
                 else if(opt.equals("1")){
-                    gym[j].pokHealth-=doDamage(myPok[i].move1, gym[j]);
+                    currMove=myPok[j].move1;
+                    damage=doDamage(myPok[i].move1, gym[j]);
+                    gym[j].pokHealth-=damage;
+                    System.out.println("\n    "+myPok[j].pokName+" used "+currMove.moveName+" and did "+damage+" damage to "+gym[i].pokName);
+                    System.out.print("\n    HEALTH\n");
+                    System.out.println("\n    "+myPok[i].pokName+" : "+myPok[i].pokHealth);
+                    if(gym[j].pokHealth<=0) System.out.println("\n     "+gym[j].pokName+" : "+0);
+                    else System.out.println("\n     "+gym[j].pokName+" : "+gym[j].pokHealth);
                     break;
                 }    
                 else if(opt.equals("2")){
-                    gym[j].pokHealth-=doDamage(myPok[i].move2, gym[j]);
+                    currMove=myPok[j].move2;
+                    damage=doDamage(myPok[i].move2, gym[j]);
+                    gym[j].pokHealth-=damage;
+                    System.out.println("\n    "+myPok[j].pokName+" used "+currMove.moveName+" and did "+damage+" damage to "+gym[i].pokName);
+                    System.out.print("\n    HEALTH\n");
+                    System.out.println("\n    "+myPok[i].pokName+" : "+myPok[i].pokHealth);
+                    if(gym[j].pokHealth<=0) System.out.println("\n     "+gym[j].pokName+" : "+0);
+                    else System.out.println("\n     "+gym[j].pokName+" : "+gym[j].pokHealth);
                     break;
                 }
                 else if(opt.equals("3")){
-                    gym[j].pokHealth-=doDamage(myPok[i].move3, gym[j]);
+                    currMove=myPok[j].move3;
+                    damage=doDamage(myPok[i].move3, gym[j]);
+                    gym[j].pokHealth-=damage;
+                    System.out.println("\n    "+myPok[j].pokName+" used "+currMove.moveName+" and did "+damage+" damage to "+gym[i].pokName);
+                    System.out.print("\n    HEALTH\n");
+                    System.out.println("\n    "+myPok[i].pokName+" : "+myPok[i].pokHealth);
+                    if(gym[j].pokHealth<=0) System.out.println("\n     "+gym[j].pokName+" : "+0);
+                    else System.out.println("\n     "+gym[j].pokName+" : "+gym[j].pokHealth);
                     break;
                 }
                 else if(opt.equals("4")){
-                    gym[j].pokHealth-=doDamage(myPok[i].move4, gym[j]);
+                    currMove=myPok[j].move4;
+                    damage=doDamage(myPok[i].move4, gym[j]);
+                    gym[j].pokHealth-=damage;
+                    System.out.println("\n    "+myPok[j].pokName+" used "+currMove.moveName+" and did "+damage+" damage to "+gym[i].pokName);
+                    System.out.print("\n    HEALTH\n");
+                    System.out.println("\n    "+myPok[i].pokName+" : "+myPok[i].pokHealth);
+                    if(gym[j].pokHealth<=0) System.out.println("\n     "+gym[j].pokName+" : "+0);
+                    else System.out.println("\n     "+gym[j].pokName+" : "+gym[j].pokHealth);
                     break;
                 }
             }
+            
+            int x=i;
+            x=j;
+            if(gym[j].pokHealth<=0) x=checkPok(j,gym);
+            if(x==4){
+                System.out.print("\n\n  ********** YOU WON ! *********\n");
+                break;
+            }
+            else if(x!=j){
+                j=x;
+                System.out.print("\n   xxxxxxxxx "+myPok[i].pokName+" VS "+gym[j].pokName+" xxxxxxxxx\n");
+                System.out.print("\n    HEALTH\n");
+                System.out.println("\n    "+myPok[i].pokName+" : "+myPok[i].pokHealth);
+                System.out.println("\n    "+gym[j].pokName+" : "+gym[j].pokHealth);
+            }
+
+            System.out.println("\n  ............ ");
+
             Random rand=new Random();
             int m=rand.nextInt(4);
-            int damage=0;
 
-            if(m==0) damage=doDamage(gym[j].move1,myPok[i]);
-            else if(m==0) damage=doDamage(gym[j].move2,myPok[i]);
-            else if(m==0) damage=doDamage(gym[j].move3,myPok[i]);
-            else if(m==0) damage=doDamage(gym[j].move4,myPok[i]);
+
+            if(m==0){
+                currMove=gym[j].move1;
+                damage=doDamage(gym[j].move1,myPok[i]);
+            }
+            else if(m==1){
+                currMove=gym[j].move2;
+                damage=doDamage(gym[j].move2,myPok[i]);
+            }
+            else if(m==2){
+                currMove=gym[j].move3;
+                damage=doDamage(gym[j].move3,myPok[i]);
+            }
+            else if(m==3){
+                currMove=gym[j].move4;
+                damage=doDamage(gym[j].move4,myPok[i]);
+            }
             myPok[i].pokHealth-=damage;
-            if(myPok[i].pokHealth<=0) i=checkPok(i,myPok);
-            if(i==4){
-                System.out.print("\n\n  **********  YOU LOST  *********");
+
+            System.out.println("\n    "+gym[j].pokName+" used "+currMove.moveName+" and did "+damage+" damage to "+myPok[i].pokName);
+            System.out.print("\n    HEALTH\n");
+            if(myPok[i].pokHealth<=0) System.out.println("\n     "+myPok[i].pokName+" : "+0);
+            else System.out.println("\n     "+myPok[i].pokName+" : "+myPok[i].pokHealth);
+            System.out.println("\n    "+gym[j].pokName+" : "+gym[j].pokHealth);
+
+            if(myPok[i].pokHealth<=0) x=checkPok(i,myPok);
+            if(x==4){
+                System.out.print("\n\n  **********  YOU LOST  *********\n");
                 break;
             }
-            else{
-                System.out.print("\n   xxxxxxxxx "+myPok[i].pokName+" VS "+gym[j].pokName+" xxxxxxxxx");
+            else if(x!=i){
+                i=x;
+                System.out.print("\n   xxxxxxxxx "+myPok[i].pokName+" VS "+gym[j].pokName+" xxxxxxxxx\n");
+                System.out.print("\n    HEALTH\n");
+                System.out.println("\n    "+myPok[i].pokName+" : "+myPok[i].pokHealth);
+                System.out.println("\n    "+gym[j].pokName+" : "+gym[j].pokHealth);
             }
-            if(gym[j].pokHealth<=0) i=checkPok(j,gym);
-            if(j==4){
-                System.out.print("\n\n  ********** YOU WON ! *********");
-                break;
-            }
-            else{
-                System.out.print("\n   xxxxxxxxx "+myPok[i].pokName+" VS "+gym[j].pokName+" xxxxxxxxx");
-            }
+            
         }
-        input.close();
     }
 
     public static int switchPok(Pokemon myPok[]){
@@ -150,7 +231,6 @@ public class BattleMechanics{
                 break;
             } 
         }    
-        input.close();
         return i;
     }
 

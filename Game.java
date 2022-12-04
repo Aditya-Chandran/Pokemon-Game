@@ -17,7 +17,7 @@ public class Game{
             }
             else if(opt.equalsIgnoreCase("E")) System.exit(0);
         }
-        input.close();
+        Game.options();
     }
     public static void main(String[] args) {
         options();
@@ -64,12 +64,22 @@ class AllFunctions{
                 break;
             }          
         }
-        input.close();
+        // input.close();
+        for(int i=0;i<3;i++){
+            int a[]=BattleMechanics.changeData(gym[i]);
+            gym[i].pokHealth=a[0];
+            gym[i].move1.moveDamage=a[1];
+            gym[i].move2.moveDamage=a[2];
+            gym[i].move3.moveDamage=a[3];
+            gym[i].move4.moveDamage=a[4];
+        }
+
         return gym;
     }
 
     public static Pokemon[] selectPokSet(){
         Pokemon myPok[];
+        SelectPokemon.addInSet();
         Scanner input=new Scanner(System.in);
         System.out.print("\n  ------------------------ SELECT YOUR POKEMON GROUP -------------------------- ");
         for(int i=0;i<6;i++){
@@ -103,7 +113,15 @@ class AllFunctions{
                 break;
             }
         }
-        input.close();
+        // input.close();
+        for(int i=0;i<3;i++){
+            int a[]=BattleMechanics.changeData(myPok[i]);
+            myPok[i].pokHealth=a[0];
+            myPok[i].move1.moveDamage=a[1];
+            myPok[i].move2.moveDamage=a[2];
+            myPok[i].move3.moveDamage=a[3];
+            myPok[i].move4.moveDamage=a[4];
+        }
         return myPok;
     }
 }
