@@ -3,7 +3,7 @@ package static_database;
 import java.util.*;
 
 public class Pokemon {
-    public int pokType, pokSpeed,pokCost, pokLevel,pokHealth;
+    public int pokType, pokSpeed,pokCost, pokHealth,pokLevel;
     public String pokSprite;
     public String pokName;
     public Moves move1;
@@ -35,7 +35,7 @@ public class Pokemon {
         // ************************             FIRE TYPE            *************************
 
 
-        /*0*/Pokemon charmander=new Pokemon("Charmander",1,65,40 , 3000 ,"./pokemonSprites/charmander.png",list.get(0),list.get(2),list.get(55),list.get(35));
+        /*0*/Pokemon charmander=new Pokemon("Charmander",1,65,40 , 3000 ,"./pokemonSprites/charmander.png",list.get(0),list.get(2),list.get(55),list.get(6));
         pokList.add(charmander);
 
         /*1*/Pokemon vulpix=new Pokemon("Vulpix",1,65, 30, 2500 ,"./pokemonSprites/vulpix.png",list.get(1),list.get(2),list.get(52),list.get(44));
@@ -66,25 +66,25 @@ public class Pokemon {
         // ************************             WATER TYPE            *************************
 
 
-        /*9*/Pokemon squirtle=new Pokemon("Squirtle",2,43, 40,3000 ,"./pokemonSprites/squirtle.png",list.get(0),list.get(2),list.get(55),list.get(35));
+        /*9*/Pokemon squirtle=new Pokemon("Squirtle",2,43, 40,3000 ,"./pokemonSprites/squirtle.png",list.get(7),list.get(13),list.get(58),list.get(55));
         pokList.add(squirtle);
         
-        /*10*/Pokemon psyduck=new Pokemon("Psyduck",2,55, 30,2500 ,"./pokemonSprites/psyduck.png",list.get(0),list.get(2),list.get(55),list.get(35));
+        /*10*/Pokemon psyduck=new Pokemon("Psyduck",2,55, 30,2500 ,"./pokemonSprites/psyduck.png",list.get(12  ),list.get(9),list.get(55),list.get(35));
         pokList.add(psyduck);
         
-        /*11*/Pokemon krabby=new Pokemon("Krabby",2,50, 30,2500 ,"./pokemonSprites/krabby.png",list.get(0),list.get(2),list.get(55),list.get(35));
+        /*11*/Pokemon krabby=new Pokemon("Krabby",2,50, 30,2500 ,"./pokemonSprites/krabby.png",list.get(8),list.get(13),list.get(52),list.get(10));
         pokList.add(krabby);
 
         /*12*/Pokemon totodile=new Pokemon("Totodile",2,43, 40,3000 ,"./pokemonSprites/totodile.png",list.get(0),list.get(2),list.get(55),list.get(35));
         pokList.add(totodile);
 
-        /*13*/Pokemon mudkip=new Pokemon("Mudkip",2,40, 40,3000 ,"./pokemonSprites/mudkip.png",list.get(0),list.get(2),list.get(55),list.get(35));
+        /*13*/Pokemon mudkip=new Pokemon("Mudkip",2,40, 40,3000 ,"./pokemonSprites/mudkip.png",list.get(7),list.get(8),list.get(58),list.get(60));
         pokList.add(mudkip);
         
-        /*14*/Pokemon froakie=new Pokemon("Froakie",2,71,40 ,3000 ,"./pokemonSprites/froakie.png",list.get(0),list.get(2),list.get(55),list.get(35));
+        /*14*/Pokemon froakie=new Pokemon("Froakie",2,71,40 ,3000 ,"./pokemonSprites/froakie.png",list.get(8),list.get(10),list.get(61),list.get(14));
         pokList.add(froakie);
         
-        /*15*/Pokemon popplio=new Pokemon("Popplio",2,40,40 ,3000 ,"./pokemonSprites/popplio.png",list.get(0),list.get(2),list.get(55),list.get(35));
+        /*15*/Pokemon popplio=new Pokemon("Popplio",2,40,40 ,3000 ,"./pokemonSprites/popplio.png",list.get(7),list.get(8),list.get(61),list.get(14));
         pokList.add(popplio);
 
 
@@ -92,22 +92,22 @@ public class Pokemon {
         // ************************             GRASS TYPE            *************************
 
 
-        /*16*/Pokemon bulbasaur=new Pokemon("Bulbasaur",3,45, 40,3000 ,"./pokemonSprites/bulbasaur.png",list.get(0),list.get(2),list.get(55),list.get(35));
+        /*16*/Pokemon bulbasaur=new Pokemon("Bulbasaur",3,45, 40,3000 ,"./pokemonSprites/bulbasaur.png",list.get(16),list.get(18),list.get(44),list.get(21));
         pokList.add(bulbasaur);
 
-        /*17*/Pokemon chikorita=new Pokemon("Chikorita",3,45,40,3000 ,"./pokemonSprites/chikorita.png",list.get(0),list.get(2),list.get(55),list.get(35));
+        /*17*/Pokemon chikorita=new Pokemon("Chikorita",3,45,40,3000 ,"./pokemonSprites/chikorita.png",list.get(17),list.get(19),list.get(55),list.get(52));
         pokList.add(chikorita);
 
-        /*18*/Pokemon treecko=new Pokemon("Treecko",3,70,40 ,3000 ,"./pokemonSprites/treecko.png",list.get(0),list.get(2),list.get(55),list.get(35));
+        /*18*/Pokemon treecko=new Pokemon("Treecko",3,70,40 ,3000 ,"./pokemonSprites/treecko.png",list.get(17),list.get(19),list.get(55),list.get(40));
         pokList.add(treecko);
         
-        /*19*/Pokemon rowlet=new Pokemon("Rowlet",3,42,40 ,3000 ,"./pokemonSprites/rowlet.png",list.get(0),list.get(2),list.get(55),list.get(35));
+        /*19*/Pokemon rowlet=new Pokemon("Rowlet",3,42,40 ,3000 ,"./pokemonSprites/rowlet.png",list.get(16),list.get(20),list.get(53),list.get(51));
         pokList.add(rowlet);
         
         // ************************             FLYING TYPE            *************************
 
 
-        /*20*/Pokemon pidgey=new Pokemon("Pidgey",4,56, 40,3000 ,"./pokemonSprites/pidgey.png",list.get(0),list.get(2),list.get(55),list.get(35));
+        /*20*/Pokemon pidgey=new Pokemon("Pidgey",4,56, 40,3000 ,"./pokemonSprites/pidgey.png",list.get(51),list.get(52),list.get(53),list.get(55));
         pokList.add(pidgey);
 
         /*21*/Pokemon starly=new Pokemon("Starly",4,60, 40,3000 ,"./pokemonSprites/starly-f.png",list.get(0),list.get(2),list.get(55),list.get(35));
@@ -116,13 +116,13 @@ public class Pokemon {
         // ************************             ELECTRIC TYPE            *************************
         
 
-        /*22*/Pokemon pikachu=new Pokemon("Pikachu",5,90,40 ,3000 ,"./pokemonSprites/pikachu-f.png",list.get(0),list.get(2),list.get(55),list.get(35));
+        /*22*/Pokemon pikachu=new Pokemon("Pikachu",5,90,40 ,3000 ,"./pokemonSprites/pikachu-f.png",list.get(25),list.get(24),list.get(28),list.get(30));
         pokList.add(pikachu);
 
-        /*23*/Pokemon electabuzz=new Pokemon("Electabuzz",5,105,40 ,3000 ,"./pokemonSprites/electabuzz.png",list.get(0),list.get(2),list.get(55),list.get(35));
+        /*23*/Pokemon electabuzz=new Pokemon("Electabuzz",5,105,40 ,3000 ,"./pokemonSprites/electabuzz.png",list.get(27),list.get(35),list.get(47),list.get(53));
         pokList.add(electabuzz);
 
-        /*24*/Pokemon electrike=new Pokemon("Electrike",5,65,30 ,2500 ,"./pokemonSprites/electrike.png",list.get(0),list.get(2),list.get(55),list.get(35));
+        /*24*/Pokemon electrike=new Pokemon("Electrike",5,65,30 ,2500 ,"./pokemonSprites/electrike.png",list.get(46),list.get(63),list.get(25),list.get(39));
         pokList.add(electrike);
 
 
@@ -144,17 +144,17 @@ public class Pokemon {
         /*28*/Pokemon abra=new Pokemon("Abra",7,90,40 ,3000 ,"./pokemonSprites/abra.png",list.get(0),list.get(2),list.get(55),list.get(35));
         pokList.add(abra);
         
-        /*29*/Pokemon ralts=new Pokemon("Ralts",7,40,40 ,3000 ,"./pokemonSprites/ralts.png",list.get(0),list.get(2),list.get(55),list.get(35));
+        /*29*/Pokemon ralts=new Pokemon("Ralts",7,40,40 ,3000 ,"./pokemonSprites/ralts.png",list.get(56),list.get(36),list.get(32),list.get(3));
         pokList.add(ralts);
 
-        /*30*/Pokemon gothita =new Pokemon("Gothita",7,45,30,2500 ,"./pokemonSprites/gothita.png",list.get(0),list.get(2),list.get(55),list.get(35));
+        /*30*/Pokemon gothita =new Pokemon("Gothita",7,45,30,2500 ,"./pokemonSprites/gothita.png",list.get(55),list.get(45),list.get(24),list.get(15));
         pokList.add(gothita);
 
         
         // ************************             FIGHTING TYPE            *************************
 
 
-        /*31*/Pokemon machop=new Pokemon("Machop",8,35,30 ,2500 ,"./pokemonSprites/machop.png",list.get(0),list.get(2),list.get(55),list.get(35));
+        /*31*/Pokemon machop=new Pokemon("Machop",8,35,30 ,2500 ,"./pokemonSprites/machop.png",list.get(28),list.get(52),list.get(58),list.get(61));
         pokList.add(machop);
 
         /*32*/Pokemon makuhita=new Pokemon("Makuhita",8,25, 30,2500 ,"./pokemonSprites/makuhita.png",list.get(0),list.get(2),list.get(55),list.get(35));
@@ -210,19 +210,19 @@ public class Pokemon {
         // ************************             DRAGON TYPE            *************************
 
 
-        /*43*/Pokemon bagon=new Pokemon("Bagon",13,50, 45,3500 ,"./pokemonSprites/bagon.png",list.get(0),list.get(2),list.get(55),list.get(35));
+        /*43*/Pokemon bagon=new Pokemon("Bagon",13,50, 45,3500 ,"./pokemonSprites/bagon.png",list.get(57),list.get(63),list.get(65),list.get(7));
         pokList.add(bagon);
 
         /*44*/Pokemon dratini=new Pokemon("Dratini",13,50, 45,3500 ,"./pokemonSprites/dratini.png",list.get(0),list.get(2),list.get(55),list.get(35));
         pokList.add(dratini);
         
-        /*45*/Pokemon axew=new Pokemon("Axew",13,57, 45,3500 ,"./pokemonSprites/axew.png",list.get(0),list.get(2),list.get(55),list.get(35));
+        /*45*/Pokemon axew=new Pokemon("Axew",13,57, 45,3500 ,"./pokemonSprites/axew.png",list.get(66),list.get(38),list.get(63),list.get(54));
         pokList.add(axew);
 
-        /*46*/Pokemon gible=new Pokemon("Gible",13,42, 45,3500 ,"./pokemonSprites/gible.png",list.get(0),list.get(2),list.get(55),list.get(35));
+        /*46*/Pokemon gible=new Pokemon("Gible",13,42, 45,3500 ,"./pokemonSprites/gible.png",list.get(46),list.get(34),list.get(3),list.get(50));
         pokList.add(gible);
         
-        /*47*/Pokemon goomy=new Pokemon("Goomy",13,40,45 ,3500 ,"./pokemonSprites/goomy.png",list.get(0),list.get(2),list.get(55),list.get(35));
+        /*47*/Pokemon goomy=new Pokemon("Goomy",13,40,45 ,3500 ,"./pokemonSprites/goomy.png",list.get(66),list.get(38),list.get(63),list.get(54));
         pokList.add(goomy);
 
 
@@ -230,10 +230,10 @@ public class Pokemon {
         // ************************             GHOST TYPE            *************************
 
 
-        /*48*/Pokemon gastly=new Pokemon("Gastly",14,80,40 ,3000 ,"./pokemonSprites/gastly.png",list.get(0),list.get(2),list.get(55),list.get(35));
+        /*48*/Pokemon gastly=new Pokemon("Gastly",14,80,40 ,3000 ,"./pokemonSprites/gastly.png",list.get(59),list.get(48),list.get(68),list.get(61));
         pokList.add(gastly);
         
-        /*49*/Pokemon duskull=new Pokemon("Duskull",14,20, 30,2500,"./pokemonSprites/duskull.png",list.get(0),list.get(2),list.get(55),list.get(35));
+        /*49*/Pokemon duskull=new Pokemon("Duskull",14,20, 30,2500,"./pokemonSprites/duskull.png",list.get(67),list.get(61),list.get(58),list.get(35));
         pokList.add(duskull);
 
 
@@ -256,7 +256,7 @@ public class Pokemon {
         /*54*/Pokemon giratina=new Pokemon("Giratina",15,90,70 , 5000,"./pokemonSprites/giratina.png",list.get(0),list.get(2),list.get(55),list.get(35));
         pokList.add(giratina);
         
-        /*55*/Pokemon groudon=new Pokemon("Groudon",15,90,70 , 5000,"./pokemonSprites/groudon.png",list.get(0),list.get(2),list.get(55),list.get(35));
+        /*55*/Pokemon groudon=new Pokemon("Groudon",15,90,70 , 5000,"./pokemonSprites/groudon.png",list.get(28),list.get(2),list.get(32),list.get(57));
         pokList.add(groudon);
         
         /*56*/Pokemon hoopa=new Pokemon("Hoopa",15,70,70 ,5000 ,"./pokemonSprites/hoopa.png",list.get(0),list.get(2),list.get(55),list.get(35));
@@ -268,19 +268,19 @@ public class Pokemon {
         /*58*/Pokemon kyurem=new Pokemon("Kyurem",15,95,70 ,5000 ,"./pokemonSprites/kyurem.png",list.get(0),list.get(2),list.get(55),list.get(35));
         pokList.add(kyurem);
 
-        /*59*/Pokemon latios=new Pokemon("Latios",15,110, 70, 5000,"./pokemonSprites/latios.png",list.get(0),list.get(2),list.get(55),list.get(35));
+        /*59*/Pokemon latios=new Pokemon("Latios",15,110, 70, 5000,"./pokemonSprites/latios.png",list.get(64),list.get(57),list.get(50),list.get(45));
         pokList.add(latios);
         
-        /*60*/Pokemon lugia=new Pokemon("Lugia",15,110, 70, 5000,"./pokemonSprites/lugia.png",list.get(0),list.get(2),list.get(55),list.get(35));
+        /*60*/Pokemon lugia=new Pokemon("Lugia",15,110, 70, 5000,"./pokemonSprites/lugia.png",list.get(35),list.get(13),list.get(52),list.get(56));
         pokList.add(lugia);
         
-        /*61*/Pokemon mewtwo=new Pokemon("Mewtwo",15,130, 70, 5000,"./pokemonSprites/mewtwo.png",list.get(0),list.get(2),list.get(55),list.get(35));
+        /*61*/Pokemon mewtwo=new Pokemon("Mewtwo",15,130, 70, 5000,"./pokemonSprites/mewtwo.png",list.get(27),list.get(34),list.get(24),list.get(57));
         pokList.add(mewtwo);
         
         /*62*/Pokemon palkia=new Pokemon("Palkia",15,100,70 , 5000,"./pokemonSprites/palkia.png",list.get(0),list.get(2),list.get(55),list.get(35));
         pokList.add(palkia);
 
-        /*63*/Pokemon rayquaza=new Pokemon("Rayquaza",15,95,70 ,5000 ,"./pokemonSprites/rayquaza.png",list.get(0),list.get(2),list.get(55),list.get(35));
+        /*63*/Pokemon rayquaza=new Pokemon("Rayquaza",15,95,70 ,5000 ,"./pokemonSprites/rayquaza.png",list.get(65),list.get(50),list.get(35),list.get(27));
         pokList.add(rayquaza);
         
         /*64*/Pokemon reshiram=new Pokemon("Reshiram",15,90, 70,5000 ,"./pokemonSprites/reshiram.png",list.get(0),list.get(2),list.get(55),list.get(35));
