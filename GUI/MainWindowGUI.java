@@ -61,10 +61,6 @@ public class MainWindowGUI implements ActionListener  {
         frame.add(panel);
         
 
-        // panel4.setBackground(new Color(0, 0, 100));
-        // panel4.setBounds(222, 5, 1000, 300);
-        // panel.add(panel4);
-
         panel1.setBackground(new Color(0, 0, 100));
         panel1.setBounds(222, 320, 1000, 100);
         panel1.setLayout(null);
@@ -136,7 +132,6 @@ public class MainWindowGUI implements ActionListener  {
         if (e.getSource()==newButton){
             NewWindow.createNewFrame();
             frame.setVisible(false);
-            // SwingUtilities.updateComponentTreeUI(frame);
         }
     }
 }

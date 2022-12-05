@@ -80,7 +80,6 @@ public class BattleWindow implements ActionListener{
         JPanel healthPaneluser = new JPanel();
         JPanel healthPanelopp = new JPanel();
         JLabel bgLabel = new JLabel(); // create label and title
-        // JLabel bgLabel = new JLabel(); // create label and title
         JPanel homeButtonPanel = new JPanel();
         Button2 = new JButton();
         moveButton1 = new JButton();
@@ -125,7 +124,6 @@ public class BattleWindow implements ActionListener{
 
         Panel2.setBounds(0,550, 1424, 258);
         Panel2.setBackground(new Color(0,100,100));
-        // Panel2.setBorder(BorderFactory.createLineBorder(Color.RED));
         Panel2.setLayout(null);
         Panel2.setOpaque(false);
         Panel1.add(Panel2);
@@ -133,7 +131,6 @@ public class BattleWindow implements ActionListener{
         homeButtonPanel.setBounds(8, 8, 40, 40);
         homeButtonPanel.setBackground(new Color(0,0,100));
         homeButtonPanel.setLayout(null);
-        // Button2.setPreferredSize(new Dimension(40, 40));
         Button2.setBounds(0,0,40,40);
         Button2.setBackground(Color.GRAY);
         Button2.setBorder(border);
@@ -205,7 +202,6 @@ public class BattleWindow implements ActionListener{
         pokeLabel2.setIcon(userLogo);
         pokeLabel2.setVerticalAlignment(JLabel.BOTTOM);
         pokeLabel2.setHorizontalAlignment(JLabel.RIGHT);        
-        // Panel3.setBorder(BorderFactory.createLineBorder(Color.RED));
         Panel3.add(pokeLabel2);
         Panel3.setOpaque(false);
         Panel1.add(Panel3);
@@ -215,7 +211,6 @@ public class BattleWindow implements ActionListener{
         pokeLabel1.setIcon(oppLogo);
         pokeLabel1.setVerticalAlignment(JLabel.BOTTOM);
         pokeLabel1.setHorizontalAlignment(JLabel.LEFT);        
-        // Panel4.setBorder(BorderFactory.createLineBorder(Color.RED));
         Panel4.add(pokeLabel1);
         Panel1.add(Panel4);
 
