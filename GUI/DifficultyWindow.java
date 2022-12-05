@@ -7,6 +7,7 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import static_database.*;
+import GUIMechanics.*;
 
 
 public class DifficultyWindow implements ActionListener {
@@ -23,8 +24,10 @@ public class DifficultyWindow implements ActionListener {
     static ImageIcon gym3 = new ImageIcon("./images/Gym3.png");
     static ImageIcon gym4 = new ImageIcon("./images/Gym4.png");
     static ImageIcon gym5 = new ImageIcon("./images/Gym5.png");
-    public static GymDiff gymList;
+    // public static Pokemon gymPok[];
     public static int gymIndex;
+
+    
 
     public static void createDW()
     {   
@@ -231,8 +234,6 @@ public class DifficultyWindow implements ActionListener {
         pokSet5.setBounds(30, 50, 220, 497);
         pokSet5.setIcon(gym5);
         gym5Panel.add(pokSet5);
-        
-
 
         
         PANEL.add(homeButton);
@@ -274,9 +275,11 @@ public class DifficultyWindow implements ActionListener {
         else if (e.getSource()== gym5Button){
             SelectPokemon.addInSet();
             gymIndex=5;
-            SelectionWindow.index=5;
+            // SelectionWindow.index=5;
             dwFrame.setVisible(false);
-            BattleWindow.battle();
+            // BattleWindow.battle();
+            // SelectionWindow.userSelection();
+            GUImech.setPok(5, 5);
         }
 
     }

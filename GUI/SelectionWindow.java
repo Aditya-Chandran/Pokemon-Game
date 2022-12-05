@@ -1,6 +1,7 @@
 package GUI;
 
 import GUI.*;
+import GUIMechanics.GUImech;
 import mechanics.*;
 import static_database.*;
 import javax.swing.*;
@@ -243,32 +244,37 @@ public class SelectionWindow implements ActionListener {
             SelectPokemon.addInSet();
             index = 0;
             usFrame.setVisible(false);
-            BattleWindow.battle();
+            // BattleWindow.battle();
+            GUImech.setPok(index, DifficultyWindow.gymIndex);
         }
         if (e.getSource() == us2Button) {
             SelectPokemon.addInSet();
             index = 1;
             usFrame.setVisible(false);
-            BattleWindow.battle();
+            // BattleWindow.battle();
+            GUImech.setPok(index, DifficultyWindow.gymIndex);
 
         }
         if (e.getSource() == us3Button) {
             SelectPokemon.addInSet();
             index = 2;
             usFrame.setVisible(false);
-            BattleWindow.battle();
+            // BattleWindow.battle();
+            GUImech.setPok(index, DifficultyWindow.gymIndex);
         }
         if (e.getSource() == us4Button) {
             SelectPokemon.addInSet();
             index = 3;
             usFrame.setVisible(false);
-            BattleWindow.battle();
+            // BattleWindow.battle();
+            GUImech.setPok(index, DifficultyWindow.gymIndex);
         }
         if (e.getSource() == us5Button) {
             SelectPokemon.addInSet();
             index = 4;
             usFrame.setVisible(false);
-            BattleWindow.battle();
+            // BattleWindow.battle();
+            GUImech.setPok(index, DifficultyWindow.gymIndex);
         }
 
     }
