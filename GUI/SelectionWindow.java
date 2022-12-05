@@ -1,8 +1,6 @@
 package GUI;
 
-import GUI.*;
 import GUIMechanics.GUImech;
-import mechanics.*;
 import static_database.*;
 import javax.swing.*;
 import javax.swing.border.Border;
@@ -43,7 +41,7 @@ public class SelectionWindow implements ActionListener {
         usFrame.setLocationRelativeTo(null);
         usFrame.setTitle("Pokemon");
 
-        ////////////////////////////////////////////// PANELS //////////////////////////////////////////////
+        ////////////////////////////////////////////// PANELS ////////////////////////////////////////////// 
         usPANEL = new JPanel();
         us1Panel = new JPanel();
         us2Panel = new JPanel();
@@ -183,7 +181,7 @@ public class SelectionWindow implements ActionListener {
         head.setVerticalAlignment(JLabel.TOP);
         head.setHorizontalAlignment(JLabel.CENTER);
 
-        ////////////////////////////////////////////// HOME BUTTON //////////////////////////////////////////////
+        ////////////////////////////////////////////// HOME BUTTON ////////////////////////////////////////////// 
         homeButton = new JButton();
         homeButton.setPreferredSize(new Dimension(40, 40));
         homeButton.setBounds(10, 10, 40, 40);
@@ -194,7 +192,7 @@ public class SelectionWindow implements ActionListener {
         homeButton.setIcon(MainWindowGUI.homeIcon); // adds image on newlabel
         homeButton.addActionListener(new SelectionWindow());
 
-        ////////////////////////////////////////////// PokSprites  //////////////////////////////////////////////
+        ////////////////////////////////////////////// PokSprites ////////////////////////////////////////////// 
         userSet1 = new JLabel();
         userSet2 = new JLabel();
         userSet3 = new JLabel();
@@ -253,21 +251,18 @@ public class SelectionWindow implements ActionListener {
             SelectPokemon.addInSet();
             index = 2;
             usFrame.setVisible(false);
-            // BattleWindow.battle();
             GUImech.setPok(index, DifficultyWindow.gymIndex);
         }
         if (e.getSource() == us4Button) {
             SelectPokemon.addInSet();
             index = 3;
             usFrame.setVisible(false);
-            // BattleWindow.battle();
             GUImech.setPok(index, DifficultyWindow.gymIndex);
         }
         if (e.getSource() == us5Button) {
             SelectPokemon.addInSet();
             index = 4;
             usFrame.setVisible(false);
-            // BattleWindow.battle();
             GUImech.setPok(index, DifficultyWindow.gymIndex);
         }
 

@@ -1,15 +1,10 @@
 package GUI;
 
-import mainData.*;
-import mechanics.*;
-import static_database.*;
 import javax.swing.*;
 import javax.swing.border.Border;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import GUI.*;
-// import static_database.*;
 
 class AllFunctions{
     
@@ -43,7 +38,6 @@ public class MainWindowGUI implements ActionListener  {
         JPanel panel1 = new JPanel();
         JPanel panel2 = new JPanel();
         JPanel panel3 = new JPanel();
-        JPanel panel4 = new JPanel();
         JLabel label = new JLabel(); // create label and title
         JLabel bgLabel = new JLabel(); // create label and title
         
@@ -66,10 +60,6 @@ public class MainWindowGUI implements ActionListener  {
         panel.setLayout(null);
         frame.add(panel);
         
-
-        // panel4.setBackground(new Color(0, 0, 100));
-        // panel4.setBounds(222, 5, 1000, 300);
-        // panel.add(panel4);
 
         panel1.setBackground(new Color(0, 0, 100));
         panel1.setBounds(222, 320, 1000, 100);
@@ -142,7 +132,6 @@ public class MainWindowGUI implements ActionListener  {
         if (e.getSource()==newButton){
             NewWindow.createNewFrame();
             frame.setVisible(false);
-            // SwingUtilities.updateComponentTreeUI(frame);
         }
     }
 }

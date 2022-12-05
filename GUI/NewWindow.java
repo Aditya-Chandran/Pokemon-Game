@@ -5,7 +5,6 @@ import javax.swing.border.Border;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.*;
-import GUI.*;
 
 public class NewWindow implements ActionListener{
 
