@@ -27,7 +27,7 @@ public class BattleWindow implements ActionListener{
     static String gymPokImage,myPokImage;
     static ImageIcon backgroundImage = new ImageIcon(".\\images\\battleSequence.png");
     static Pokemon myPok[],gymPok[];
-    static int a=0,b=0;
+    public static int a=0,b=0;
     static String status,myStatus,gymStatus;
 
     
@@ -49,7 +49,9 @@ public class BattleWindow implements ActionListener{
             a++;
         }
         if(a>=3){
-            status="    YOU HAVE LOST !";
+            JOptionPane.showMessageDialog(battleFrame, "        YOU LOST !", "Battle", JOptionPane.PLAIN_MESSAGE);
+            DifficultyWindow.createDW();
+            battleFrame.dispose();
         }
     }
 
@@ -58,9 +60,10 @@ public class BattleWindow implements ActionListener{
             status="    "+gymPok[b].pokName+" fainted.";
             b++;
         }
-        else gymPokDamage();
         if(b>=3){
-            status="    YOU HAVE WON !";
+            JOptionPane.showMessageDialog(battleFrame, "        YOU WON !", "Battle", JOptionPane.PLAIN_MESSAGE);
+            DifficultyWindow.createDW();
+            battleFrame.dispose();
         }
     }
 
@@ -76,16 +79,11 @@ public class BattleWindow implements ActionListener{
         JPanel Panel2 = new JPanel();
         JPanel Panel3 = new JPanel();
         JPanel Panel4 = new JPanel();
-        JPanel Panel5 = new JPanel();
         JPanel textUpdate = new JPanel();
         JPanel healthPaneluser = new JPanel();
         JPanel healthPanelopp = new JPanel();
         JLabel bgLabel = new JLabel(); // create label and title
         JPanel homeButtonPanel = new JPanel();
-        BattleWindow move1 = new BattleWindow();
-        BattleWindow move2 = new BattleWindow();
-        BattleWindow move3 = new BattleWindow();
-        BattleWindow move4 = new BattleWindow();
         Button2 = new JButton();
         moveButton1 = new JButton();
         moveButton2 = new JButton();
@@ -250,63 +248,70 @@ public class BattleWindow implements ActionListener{
         int damage=0;
         if(i==1){
             damage=BattleMechanics.doDamage(myPok[a].move1, gymPok[b]);
+            myStatus="    "+myPok[a].pokName+" used "+myPok[a].move1.moveName+" and did "+damage+" damage to "+gymPok[b].pokName;
         }
         if(i==2){
             damage=BattleMechanics.doDamage(myPok[a].move2, gymPok[b]);
+            myStatus="    "+myPok[a].pokName+" used "+myPok[a].move2.moveName+" and did "+damage+" damage to "+gymPok[b].pokName;
         }
         if(i==3){
             damage=BattleMechanics.doDamage(myPok[a].move3, gymPok[b]);
+            myStatus="    "+myPok[a].pokName+" used "+myPok[a].move3.moveName+" and did "+damage+" damage to "+gymPok[b].pokName;
         }
         if(i==4){
             damage=BattleMechanics.doDamage(myPok[a].move4, gymPok[b]);
+            myStatus="    "+myPok[a].pokName+" used "+myPok[a].move4.moveName+" and did "+damage+" damage to "+gymPok[b].pokName;
         }
         gymPok[b].pokHealth-=damage;
-        myStatus="    "+myPok[a].pokName+" used "+myPok[a].move1.moveName+" and did "+damage+" damage to "+gymPok[b].pokName;
     }
 
     public static void gymPokDamage(){
         Random rand=new Random();
         int m=rand.nextInt(4);
-        int damage;
+        int damage=0;
         if(m==0){
             damage=BattleMechanics.doDamage(gymPok[b].move1,myPok[a]);
             myPok[a].pokHealth-=damage;
             gymStatus="    "+gymPok[b].pokName+" used "+gymPok[b].move1.moveName+" and did "+damage+" damage to "+myPok[a].pokName;
         }
         else if(m==1){
-            damage=BattleMechanics.doDamage(gymPok[b].move1,myPok[a]);
+            damage=BattleMechanics.doDamage(gymPok[b].move2,myPok[a]);
             myPok[a].pokHealth-=damage;
             gymStatus="    "+gymPok[b].pokName+" used "+gymPok[b].move2.moveName+" and did "+damage+" damage to "+myPok[a].pokName;
         }
         else if(m==2){
-            damage=BattleMechanics.doDamage(gymPok[b].move1,myPok[a]);
+            damage=BattleMechanics.doDamage(gymPok[b].move3,myPok[a]);
             myPok[a].pokHealth-=damage;
             gymStatus="    "+gymPok[b].pokName+" used "+gymPok[b].move3.moveName+" and did "+damage+" damage to "+myPok[a].pokName;
         }
         else if(m==3){
-            damage=BattleMechanics.doDamage(gymPok[b].move1,myPok[a]);
+            damage=BattleMechanics.doDamage(gymPok[b].move4,myPok[a]);
             myPok[a].pokHealth-=damage;
             gymStatus="    "+gymPok[b].pokName+" used "+gymPok[b].move4.moveName+" and did "+damage+" damage to "+myPok[a].pokName;
         }
+        myCheckHealth();
     }
 
     @Override
     public void actionPerformed(ActionEvent e) {
         if (e.getSource()==Button2){
             DifficultyWindow.createDW();
-            battleFrame.setVisible(false);
+            battleFrame.dispose();
         }
         if (e.getSource()==moveButton1){
             myPokDamage(1);
             status="";
             gymCheckHealth();
             gymPokDamage();
+            battleFrame.dispose();
             battle();
         }
         if (e.getSource()==moveButton2){
             myPokDamage(2);
             status="";
             gymCheckHealth();
+            gymPokDamage();
+            battleFrame.dispose();
             battle();
         }
         if (e.getSource()==moveButton3){
@@ -314,6 +319,7 @@ public class BattleWindow implements ActionListener{
             status="";
             gymCheckHealth();
             gymPokDamage();
+            battleFrame.dispose();
             battle();
         }
         if (e.getSource()==moveButton4){
@@ -321,6 +327,7 @@ public class BattleWindow implements ActionListener{
             status="";
             gymCheckHealth();
             gymPokDamage();
+            battleFrame.dispose();
             battle();
         }
     }

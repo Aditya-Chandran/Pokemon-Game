@@ -24,6 +24,8 @@ public class GUImech {
             gymPok[k].move3.moveDamage = a[3];
             gymPok[k].move4.moveDamage = a[4];
         }
+        BattleWindow.a=0;
+        BattleWindow.b=0;
         BattleWindow.set(gymPok, myPok);
     }
 }
