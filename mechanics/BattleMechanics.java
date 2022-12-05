@@ -6,7 +6,7 @@ import java.util.concurrent.*;
 
 public class BattleMechanics{
     public static int[] changeData(Pokemon pok){
-        pok.pokHealth*=pok.pokLevel/5f;
+        pok.pokHealth=pok.pokLevel*10;
         pok.move1.moveDamage*=pok.pokLevel/50f;
         pok.move2.moveDamage*=pok.pokLevel/50f;
         pok.move3.moveDamage*=pok.pokLevel/50f;

@@ -11,6 +11,10 @@ import java.awt.event.ActionListener;
 import GUI.*;
 // import static_database.*;
 
+class AllFunctions{
+    
+}
+
 public class MainWindowGUI implements ActionListener  {
     
     static MainWindowGUI obj = new MainWindowGUI();
