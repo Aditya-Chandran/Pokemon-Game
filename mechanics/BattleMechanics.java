@@ -2,7 +2,6 @@ package mechanics;
 
 import static_database.*;
 import java.util.*;
-import java.util.concurrent.*;
 
 public class BattleMechanics{
     public static int[] changeData(Pokemon pok){
@@ -148,6 +147,7 @@ public class BattleMechanics{
                     else System.out.println("\n     "+gym[j].pokName+" : "+gym[j].pokHealth);
                     break;
                 }
+                input.close();
             }
             
         
@@ -214,24 +214,25 @@ public class BattleMechanics{
 
     public static int switchPok(Pokemon myPok[]){
         int i;
-        Scanner input=new Scanner(System.in);
-        System.out.print("\n    Choose your Pokemon : (1) "+myPok[0].pokName+"  (2)"+myPok[1].pokName+"  (3) "+myPok[2].pokName);
-        while(true){
-            System.out.print("\n  >>> ");
-            String opt=input.next();
-            if(opt.equals("1")){
-                i=0;
-                break;
+        try (Scanner input = new Scanner(System.in)) {
+            System.out.print("\n    Choose your Pokemon : (1) "+myPok[0].pokName+"  (2)"+myPok[1].pokName+"  (3) "+myPok[2].pokName);
+            while(true){
+                System.out.print("\n  >>> ");
+                String opt=input.next();
+                if(opt.equals("1")){
+                    i=0;
+                    break;
+                }
+                else if(opt.equals("2")){
+                    i=1;
+                    break;
+                }
+                else if(opt.equals("3")){
+                    i=2;
+                    break;
+                } 
             }
-            else if(opt.equals("2")){
-                i=1;
-                break;
-            }
-            else if(opt.equals("3")){
-                i=2;
-                break;
-            } 
-        }    
+        }
         return i;
     }
 

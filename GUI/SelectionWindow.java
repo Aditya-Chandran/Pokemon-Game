@@ -1,8 +1,6 @@
 package GUI;
 
-import GUI.*;
 import GUIMechanics.GUImech;
-import mechanics.*;
 import static_database.*;
 import javax.swing.*;
 import javax.swing.border.Border;

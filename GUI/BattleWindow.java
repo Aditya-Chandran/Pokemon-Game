@@ -1,13 +1,10 @@
 package GUI;
-import GUI.*;
-
 import javax.swing.*;
 import javax.swing.border.Border;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.*;
 import static_database.*;
-import GUIMechanics.*;
 import mechanics.BattleMechanics;
 import java.util.*;
 

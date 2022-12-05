@@ -1,15 +1,10 @@
 package GUI;
 
-import mainData.*;
-import mechanics.*;
-import static_database.*;
 import javax.swing.*;
 import javax.swing.border.Border;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import GUI.*;
-// import static_database.*;
 
 class AllFunctions{
     
@@ -43,7 +38,6 @@ public class MainWindowGUI implements ActionListener  {
         JPanel panel1 = new JPanel();
         JPanel panel2 = new JPanel();
         JPanel panel3 = new JPanel();
-        JPanel panel4 = new JPanel();
         JLabel label = new JLabel(); // create label and title
         JLabel bgLabel = new JLabel(); // create label and title
         
