@@ -19,7 +19,7 @@ public class BattleWindow implements ActionListener{
     static JButton moveButton2 = new JButton();
     static JButton moveButton3 = new JButton();
     static JButton moveButton4 = new JButton();
-    static ImageIcon backgroundImage = new ImageIcon(".\\images\\battleSequence.png");
+    static ImageIcon backgroundImage = new ImageIcon(".\\images\\bS.png");
 
     
     public static void main(String[] args) {
