@@ -223,35 +223,35 @@ public class Moves {
 
             // ************************             DARK TYPE            *************************
 
-            /*56*/Moves foulplay=new Moves("Foul Play",11,95,100);
+            /*61*/Moves foulplay=new Moves("Foul Play",11,95,100);
             moveList.add(foulplay);
             
-            /*57*/Moves darkpulse=new Moves("Dark Pulse",11,80,100);
+            /*62*/Moves darkpulse=new Moves("Dark Pulse",11,80,100);
             moveList.add(darkpulse);
             
-            /*58*/Moves bite=new Moves("Bite",11,60,100);
+            /*63*/Moves bite=new Moves("Bite",11,60,100);
             moveList.add(bite);
             
             // ************************             DRAGON TYPE            *************************
 
-            /*56*/Moves dracometeor=new Moves("Draco Meteor",12,130,90);
+            /*64*/Moves dracometeor=new Moves("Draco Meteor",12,130,90);
             moveList.add(dracometeor);
             
-            /*57*/Moves outrage=new Moves("Outrage",12,120,100);
+            /*65*/Moves outrage=new Moves("Outrage",12,120,100);
             moveList.add(outrage);
             
-            /*58*/Moves dragonpulse=new Moves("Dragon Pulse",12,85,100);
+            /*66*/Moves dragonpulse=new Moves("Dragon Pulse",12,85,100);
             moveList.add(dragonpulse);
 
             // ************************             GHOST TYPE            *************************
 
-            /*56*/Moves poltergeist=new Moves("Poltergeist",13,110,90);
+            /*67*/Moves poltergeist=new Moves("Poltergeist",13,110,90);
             moveList.add(poltergeist);
             
-            /*57*/Moves shadowball=new Moves("Shadow Ball",13,80,100);
+            /*68*/Moves shadowball=new Moves("Shadow Ball",13,80,100);
             moveList.add(shadowball);
             
-            /*58*/Moves shadowclaw=new Moves("Shadow Claw",13,70,100);
+            /*69*/Moves shadowclaw=new Moves("Shadow Claw",13,70,100);
             moveList.add(shadowclaw);
         }
 }
