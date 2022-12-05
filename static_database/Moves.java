@@ -102,7 +102,7 @@ public class Moves {
             /*24*/Moves ThunderBolt=new Moves("ThunderBolt",4,90,100);
             moveList.add(ThunderBolt);
 
-            /*25*/Moves Volt_Tackle=new Moves("Volt_Tackle",4,120,100);
+            /*25*/Moves Volt_Tackle=new Moves("Volt Tackle",4,120,100);
             moveList.add(Volt_Tackle);
 
             // ************************             GROUND TYPE            *************************
