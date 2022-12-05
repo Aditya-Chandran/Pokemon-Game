@@ -1,6 +1,5 @@
-package mechanics;
+package static_database;
 
-import static_database.*;
 import java.util.*;
 
 public class SelectPokemon {

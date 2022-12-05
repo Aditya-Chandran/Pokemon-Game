@@ -3,7 +3,7 @@ package static_database;
 import java.util.*;
 
 public class Pokemon {
-    public int pokType, pokSpeed,pokCost, pokLevel;
+    public int pokType, pokSpeed,pokCost, pokLevel,pokHealth;
     public String pokSprite;
     public String pokName;
     public Moves move1;
@@ -15,11 +15,11 @@ public class Pokemon {
     public static ArrayList<Pokemon> pokList=new ArrayList<>();
 
     //initializes object of pok data
-    public Pokemon(String pokName, int pokType, int pokSpeed, int pokLevel, int pokCost, String pokSprite,Moves move1, Moves move2,Moves move3,Moves move4 ){
+    public Pokemon(String pokName, int pokType, int pokSpeed, int pokHealth, int pokCost, String pokSprite,Moves move1, Moves move2,Moves move3,Moves move4 ){
         this.pokName=pokName;
         this.pokType=pokType;
         this.pokSpeed=pokSpeed;
-        this.pokLevel=pokLevel;
+        this.pokHealth=pokHealth;
         this.pokCost=pokCost;
         this.pokSprite=pokSprite;
         this.move1 = move1;
