@@ -83,6 +83,7 @@ public class BattleWindow implements ActionListener{
         JPanel healthPaneluser = new JPanel();
         JPanel healthPanelopp = new JPanel();
         JLabel bgLabel = new JLabel(); // create label and title
+        // JLabel bgLabel = new JLabel(); // create label and title
         JPanel homeButtonPanel = new JPanel();
         Button2 = new JButton();
         moveButton1 = new JButton();
@@ -90,7 +91,7 @@ public class BattleWindow implements ActionListener{
         moveButton3 = new JButton();
         moveButton4 = new JButton();
         battleFrame = new JFrame("Pokemon Game");
-
+        
         battleFrame.setBounds(0, 0, 1440, 850); // sets size dimensions
         battleFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); // exit the program on close
         battleFrame.setResizable(false); // Prevent newFrame from resize
@@ -145,7 +146,7 @@ public class BattleWindow implements ActionListener{
         Button2.addActionListener(obj2);
         homeButtonPanel.add(Button2);
         Panel1.add(homeButtonPanel);
-
+        
         moveButton1.setPreferredSize(new Dimension(100, 100));
         moveButton1.setBackground(Color.GRAY);
         moveButton1.setForeground(Color.BLACK);
